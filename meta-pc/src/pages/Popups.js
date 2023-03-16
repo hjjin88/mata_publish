@@ -138,15 +138,9 @@ import LectureRoom24 from "./LectureRoom/LectureRoom24";
 import LectureRoom25 from "./LectureRoom/LectureRoom25";
 import LectureRoom26 from "./LectureRoom/LectureRoom26";
 
-// 더본코리아
-
-
 const Popups = ({ popName, setPopName }) => {
     return (
         <>
-        {/* 더본코리아 */}
-
-
         {/* LtTopBar */}
         { popName === 'Menu' && (
           <Menu setPopName={setPopName} />
