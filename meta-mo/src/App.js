@@ -8,6 +8,8 @@ import MainPage02 from "./pages/MainPage02";
 import MainPageLength from "./pages/MainPageLength";
 import MainPageWidth from "./pages/MainPageWidth";
 
+import Tb_MainPage from "./pages/Theborn/Tb_MainPage";
+
 function App() {
   return (
     <Routes>
@@ -19,6 +21,10 @@ function App() {
       {/* 모바일 */}
       <Route path="/MainPageLength" element={<MainPageLength />} />
       <Route path="/MainPageWidth" element={<MainPageWidth />} />
+
+      {/* 더본 코리아*/}
+      <Route path="/Tb" element={<Tb_MainPage/>} />
+
       {/* ETC */}
       <Route path="/" element={<MainPage />} />
     </Routes>
