@@ -5,10 +5,7 @@ import MyRoom from "./pages/MyRoom";
 import CounselingwaitingRoom from "./pages/CounselingwaitingRoom";
 import SpaceSet from "./pages/SpaceSet";
 import MainPage02 from "./pages/MainPage02";
-import Tb_MainPage from "./pages/Tb_MainPage";
-
-
-// import Home from "./Home";
+import Tb_MainPage from "./pages/Theborn/Tb_MainPage";
 
 function App() {
   return (
@@ -19,8 +16,8 @@ function App() {
       <Route path="/SpaceSet" element={<SpaceSet />} />
       <Route path="/MainPage02" element={<MainPage02 />} />
       {/* 더본 코리아*/}
-      <Route path="/Tb_MainPage" element={<Tb_MainPage/>} />
-      {/* <Route path="/Home" element={<Home />} /> */}
+      {/* <Route path="/Tb_MainPage" element={<Tb_MainPage/>} /> */}
+      <Route path="/Tb" element={<Tb_MainPage/>} />
 
       {/* ETC */}
       <Route path="/" element={<MainPage />} />

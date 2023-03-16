@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import LtTopBar from './LtTopBar'; 
-import RtBar from './RtBar'; 
-import BtBar from './BtBar';
+import LtTopBar from '../LtTopBar'; 
+import RtBar from '../RtBar'; 
+import BtBar from '../BtBar';
 import Popups from "./Popups";
+import UnKnowBtn from "./UnKnowBtn";
 
-const MainPage_Theborn = () => {
+const Tb_MainPage = () => {
   const unityRef = useRef();
 
   // 페이지 리사이즈, 스크롤 대응 state 업데이트 목적
@@ -56,11 +57,10 @@ const MainPage_Theborn = () => {
         <RtBar popName={popName} setPopName={setPopName} />
         <BtBar popName={popName} setPopName={setPopName} />
         <Popups popName={popName} setPopName={setPopName} />
-        {/* <UnKnowBtn popName={popName} setPopName={setPopName} /> */}
-
+        <UnKnowBtn popName={popName} setPopName={setPopName} />
       </div>
     </div>
   )
 }
 
-export default MainPage_Theborn;
+export default Tb_MainPage;

@@ -1,0 +1,76 @@
+html {
+    width: 100%;
+    height: 100vh;
+    background: url($res_root + '/resources/img/tb_bg.png') center no-repeat;
+    color: #fff;
+}
+
+// 퀘스트 창
+.Quest{
+    @include LtCon(40%, 0, 5);
+    transform: translateY(-50%);
+    dl{
+        .mission{
+            position: relative;
+            @include flexArCtr(0);
+            @include bg('tb_quest_bg');
+            height: 40px;
+            width: 300px;
+            padding-left: 41px;
+            &::before{
+                content: '';
+                @include bg('mission');
+                position: absolute;
+                top: 8px;
+                left: 9px;
+                width: 25px;
+                height: 25px;
+            }
+        }
+        .mission.clear{
+            &::before{
+                @include bg('mission_clear');
+            }
+        }
+        dd{
+            @include flexArCtr(0);
+            height: 40px;
+            width: 300px;
+            padding-left: 41px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+        }
+        
+    }
+}
+
+.Pop{
+    @include LtCon(50%, 50%, 11);
+    transform: translate(-50%, -50%);
+    &-ty01{
+        height: 206px;
+        width: 335px;
+        border-radius: 10px;
+        background: #fff;
+        padding: 30px;
+        text-align: center;
+        &-tit{
+            padding-bottom: 25px;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 100%;
+            color: #222;
+        }
+        &-txt{
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 22px;
+            color: #555;
+        }
+        &-btn{
+            padding-top: 26px;
+            background: #8265F6;
+            border-radius: 999px;
+        }
+    }
+
+}
