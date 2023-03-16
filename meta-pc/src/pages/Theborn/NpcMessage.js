@@ -10,7 +10,7 @@ const NpcMessage = ({ popName, setPopName }) => {
 
     return (
     <>
-        <div className="Npc-guide Tb-Npc-guide">
+        <div className="Npc-guide Tb-NpcMessage">
             <button type="button" className="subclose close16" onClick={(e) => {setPopName('TourEnd');}} />
             <div className="popTit">빽다방 아르바이트생</div>
             <img className="Npc-img" src="/resources/img/paikdb_npc.png" alt="NPC 빽다방 이미지" />
