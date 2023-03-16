@@ -1,7 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import './styles/common.scss';
-import './styles/contents-mo.scss';
-import './styles/lectureRoom-mo.scss';
+import './styles/component.scss';
 import MainPage from "./pages/MainPage";
 import MyRoom from "./pages/MyRoom";
 import CounselingwaitingRoom from "./pages/CounselingwaitingRoom";
