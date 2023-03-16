@@ -4949,3 +4949,84 @@
     }
   }
 }
+
+
+// 더본코리아
+
+// 맵 이벤트존 위치 아이콘
+.eventzoneLoc {
+  @include LtCon(423px, 935px, 1);
+}
+
+// npc guide
+.Tb-Npc-guide {
+  .con-wrap {
+    min-height: auto;
+    height: 147px;
+    max-height: 147px;
+    padding: 30px 150px 51px 34px;
+    .con-inner-col {
+      padding-right: 0;
+    }
+  }
+  .sec-btn {
+    @include BtRtCon(21px, 15px, 1);
+    width: 122px;
+  }  
+}
+
+//메시지 팝업
+.Tb-MessageInner {
+  .ChatCon .Chat01 .ChatAlert .ChatTxt {
+    border-radius: 0 0 12px 12px;
+    &::before {
+      @include bg('chatBalloon03');
+    }
+  }
+  .ChatAlertTxt {
+      @include flexArCtr(0);
+      width: 100%;
+      height: 25px;
+      padding: 6px 20px;
+      border-radius: 0 12px 0 0;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 100%;
+      color: #FFFFFF;
+      background: #8265F6;
+  }
+}
+
+// 퀘스트 아이콘
+.Quest-icon {
+  position: relative;
+
+  .Npc-alert {
+    @include LtCon(314px, 1174px, 5);
+  }
+
+  .Event-view {
+    @include LtCon(403px, 541px, 5);
+  }
+
+  .Event-play {
+    @include LtCon(453px, 541px, 5);
+  }
+
+  .Event-balloon {
+    @include LtCon(409px, 734px, 5);
+    display: flex;
+    justify-content: center;
+    width: 189px;
+    height: 86px;
+    padding-top: 28px;
+    @include bg('eventBalloon');
+    p {
+      text-align: center;
+    }
+  }
+}
+
+
+
+
