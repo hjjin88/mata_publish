@@ -12,7 +12,8 @@ const Tb_UnKnowBtn = ({ popName, setPopName }) => {
                 <button onClick={ e => { setPopName('Pop_ty02'); }}>미션 성공 팝업창</button>
                 <button onClick={ e => { setPopName('Kiosk'); }}>키오스크</button>
                 <button onClick={ e => { setPopName('NpcMessage'); }}>NPC 말풍선</button>
-                <button onClick={ e => { setPopName('EventMessage'); }}>이벤트 메세지 팝업</button>
+                <button onClick={ e => { setPopName('Message'); }}>이벤트 메세지 목록</button>
+                <button onClick={ e => { setPopName('MessageInner'); }}>이벤트 메세지 팝업</button>
                 <button onClick={ e => { setPopName('QuestIcon'); }}>퀘스트 아이콘 모음</button>
                 <button onClick={ e => { setPopName('Stamp'); }}>스탬프 팝업창</button>
             </div>

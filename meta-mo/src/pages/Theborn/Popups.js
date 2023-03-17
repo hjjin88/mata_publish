@@ -3,9 +3,10 @@ import Pop_ty01 from "./Pop_ty01";
 import Pop_ty02 from "./Pop_ty02";
 import Kiosk from "./Kiosk";
 import NpcMessage from "./NpcMessage";
-import EventMessage from "./EventMessage";
+import MessageInner from "./MessageInner";
 import QuestIcon from "./QuestIcon";
 import Stamp from "./Stamp";
+import Message from "./Message";
 
 
 const Popups = ({ popName, setPopName }) => {
@@ -26,14 +27,17 @@ const Popups = ({ popName, setPopName }) => {
         { popName === 'NpcMessage' && (
           <NpcMessage setPopName={setPopName} />
         )}
-        { popName === 'EventMessage' && (
-          <EventMessage setPopName={setPopName} />
+        { popName === 'MessageInner' && (
+          <MessageInner setPopName={setPopName} />
         )}
         { popName === 'QuestIcon' && (
           <QuestIcon setPopName={setPopName} />
         )}
         { popName === 'Stamp' && (
           <Stamp setPopName={setPopName} />
+        )}
+        { popName === 'Message' && (
+          <Message setPopName={setPopName} />
         )}
         </>
     )

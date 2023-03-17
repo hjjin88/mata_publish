@@ -4952,7 +4952,6 @@
 
 
 // 더본코리아
-
 // 맵 이벤트존 위치 아이콘
 .eventzoneLoc {
   @include LtCon(423px, 935px, 1);
@@ -4960,6 +4959,8 @@
 
 // npc guide
 .Tb-NpcMessage {
+  width: 100%;
+  max-width: 787px;
   .con-wrap {
     min-height: auto;
     height: 147px;
@@ -5004,15 +5005,12 @@
   .Npc-alert {
     @include LtCon(314px, 1174px, 10);
   }
-
   .Event-view {
     @include LtCon(403px, 541px, 10);
   }
-
   .Event-play {
     @include LtCon(453px, 541px, 10);
   }
-
   .Event-balloon {
     @include LtCon(409px, 734px, 10);
     display: flex;
@@ -5020,7 +5018,7 @@
     width: 189px;
     height: 86px;
     padding-top: 28px;
-    @include bg('tb-eventBalloon');
+    @include bg('tb-eventBalloon', $format: "png");
     p {
       text-align: center;
     }
