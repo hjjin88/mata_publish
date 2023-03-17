@@ -16,7 +16,6 @@ function App() {
       <Route path="/SpaceSet" element={<SpaceSet />} />
       <Route path="/MainPage02" element={<MainPage02 />} />
       {/* 더본 코리아*/}
-      {/* <Route path="/Tb_MainPage" element={<Tb_MainPage/>} /> */}
       <Route path="/Tb" element={<Tb_MainPage/>} />
 
       {/* ETC */}
