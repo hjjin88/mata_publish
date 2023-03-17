@@ -7564,11 +7564,13 @@ margin: 20px auto;
 
   // 맵 이벤트존 위치 아이콘
   .eventzoneLoc {
-    @include LtCon(479px, 268px, 1);
+    @include LtCon(479px, 268px, 1); 
   }
 
   // npc guide
   .Tb-NpcMessage {
+    max-width: 355px;
+    width: 100%;
     .popTit {
       font-size: 18px;
       padding-bottom: 14px;
@@ -7578,7 +7580,7 @@ margin: 20px auto;
       min-height: auto;
       height: 107px;
       max-height: 107px;
-      padding: 20px 49px 20px 30px;
+      padding: 20px 60px 20px 30px;
 
       .con-inner-col {
         max-height: none;
@@ -7678,6 +7680,8 @@ margin: 20px auto;
 
   // npc guide
   .Tb-NpcMessage {
+    max-width: 651px;
+    width: 100%;
     .popTit {
       font-size: 18px;
       padding-bottom: 14px;
