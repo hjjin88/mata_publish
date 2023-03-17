@@ -302,6 +302,10 @@ const Map = ({setPopName }) => {
                         <button type="button" className="zoomOut" />
                     </div>
                 </div>
+                {/* 이벤트존 위치 */}
+                <div className="eventzoneLoc">
+                    <img src="/resources/img/tb-eventzoneLoc.svg" alt="이벤트존 위치 이미지" />
+                </div>
             </div>
             </div>
         </div>

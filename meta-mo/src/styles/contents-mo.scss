@@ -1,275 +1,3 @@
-$res_root: 'http://localhost:3000';
-
-  
-html {
-  width: 100vw;
-  height: 100svh;
-  background:  url($res_root + '/resources/img/bg.png') center no-repeat;
-  color: #fff;
-}
-
-.wrap{position: absolute;width: 100%;height: 100%;overflow: hidden;}
-// 백그라운드 
-@mixin bg($name, $path: $res_root +"/resources/img/", $format: "svg") {
-  background: url("#{$path}#{$name}.#{$format}") center no-repeat;
-  border: none;
-}
-
-@mixin ico($name, $path: $res_root +"/resources/img/", $format: "svg") {
-  background: url("#{$path}#{$name}.#{$format}") center no-repeat;
-  overflow:hidden; 
-  color: transparent; 
-  vertical-align: middle; 
-  background-color: #fff; 
-}
-// 아이콘 이미지 공통 영역
-.mikeOff{@include bg('mikeOff20');width:16px;height: 20px;}
-.mikeOn{@include bg('mikeOn20');width:16px;height: 20px;}
-.camOff{@include bg('camOff20');width:16px;height: 20px;}
-.camOn{@include bg('camOn20');width:16px;height: 20px;}
-.videoOn30{@include bg('videoOn30');width: 30px;height: 30px;}
-.videoOff30{@include bg('videoOff30');width: 30px;height: 30px;}
-.mikeOn30{@include bg('mikeOn30');width: 30px;height: 30px;}
-.mikeOff30{@include bg('mikeOff30');width: 30px;height: 30px;}
-.downArrow{@include bg('downArrow12');width: 12px;height: 12px;position: absolute;top: 13px;right: 15px;}
-.downArrow.up{transform: scaleY(-1);}
-.downArrowWt12{@include bg('downArrowWt12');width: 12px;height: 12px;position: absolute;top: 20px;right: 21px;}
-.downArrowWt12.up{transform: scaleY(-1);}
-.stop12{@include bg('stop12');width: 12px;height: 14px;}
-.play12{@include bg('play12');width: 12px;height: 12px;}
-.favoritesOn12{@include bg('FavoritesOn12');width: 12px;height: 12px;}
-.favoritesOff12{@include bg('FavoritesOff12');width: 12px;height: 12px;}
-.locationBtnOn40{@include bg('locationBtnOn40');width: 40px;height: 40px;}
-.locationBtnOff40{@include bg('locationBtnOff40');width: 40px;height: 40px;}
-.mapCurrentLocation40{@include bg('mapCurrentLocation40');width: 40px;height: 40px;}
-.zoomIn{@include bg('zoomIn');width: 14px;height: 14px;}
-.zoomOut{@include bg('zoomOut');width: 14px;height: 14px;}
-.personFirst24{@include bg('personFirst24');width: 24px;height: 24px;}
-.person3rd24{@include bg('person3rd24');width: 24px;height: 24px;}
-.speakerOn24{@include bg('speakerOn24');width: 24px;height: 24px;}
-.speakerOff24{@include bg('speakerOff24');width: 24px;height: 24px;}
-.close24{@include bg('close24');width: 24px;height: 24px;}
-.search24{@include bg('search24');width: 24px;height: 24px;}
-.close16{@include bg('close16');width: 16px;height: 16px;}
-.closeWt16{@include bg('closeWt16');width: 16px;height: 16px;}
-.closeWt12{@include bg('closeWt12');width: 12px;height: 12px;}
-.close12{@include bg('close12');width: 12px;height: 12px;}
-.Enter20{@include bg('Enter20');width: 20px;height: 20px;}
-.EnterOn20{@include bg('EnterOn20');width: 20px;height: 20px;}
-.EnterOff20{@include bg('EnterOff20');width: 20px;height: 20px;}
-.Enteron32{@include bg('Enteron32');width: 32px;height: 32px;}
-.Enteroff32{@include bg('Enteroff32');width: 32px;height: 32px;}
-.camera18{@include bg('camera18');width: 18px;height: 16px;}
-.copy17{@include bg('copy17');width: 17px;height: 17px;}
-.skip12{@include bg('skip12');width: 12px;height: 12px;}
-.copy20{@include bg('copy20');width: 20px;height: 20px;}
-.exit24{@include bg('exit24');width: 24px;height: 24px;}
-.hamburgerMenu24{@include bg('hamburgerMenu24');width: 24px;height: 24px;}
-.privateScreen24{@include bg('privateScreen24');width: 24px;height: 24px;}
-.zoom20{@include bg('zoom20');width: 20px;height: 20px;}
-.zoomOut20{@include bg('zoomOut20');width: 20px;height: 20px;}
-.plus16{@include bg('plus16');width: 16px;height: 16px;}
-.subjectCheck16{@include bg('subjectCheck');width: 16px;height: 16px;}
-.correction16{@include bg('correction16');width: 16px;height: 16px;}
-.write16{@include bg('write16');width: 16px;height: 16px;}
-.rightArrow16{@include bg('rightArrow16');width: 6px;height: 12px;}
-.leftArrow16{@include bg('leftArrow16');width: 6px;height: 12px;}
-.closeGy20{@include bg('closeGy20');width: 20px;height: 20px;}
-.repeatOn15{@include bg('repeatOn15');width: 16px;height: 18px;}
-.repeatOff15{@include bg('repeatOff15');width: 16px;height: 18px;}
-.shuffleOn15{@include bg('shuffleOn15');width: 18px;height: 15px;}
-.shuffleOff15{@include bg('shuffleOff15');width: 18px;height: 15px;}
-.Stop-pu12{@include bg('Stop-pu12');width: 12px;height: 14px;}
-.Play-gy12{@include bg('Play-gy12');width: 12px;height: 14px;}
-.error16{@include bg('error16');width: 16px;height: 16px;}
-.edit-pen{@include bg('edit-pen');width: 14px;height: 14px;}
-.copyWt17{@include bg('copyWt17');width: 17px;height: 17px;}
-.guide24{@include bg('guide24');width: 24px;height: 24px;}
-.checkbox-pu{@include bg('checkbox-pu');width: 15px;height: 15px;}
-.plus12{@include bg('plus12');width: 12px;height: 12px;}
-
-// absolute
-@mixin RtCon($top, $Rt, $zIndex){
-  position: absolute;
-  top: $top;
-  right: $Rt;
-  z-index: $zIndex;
-}
-@mixin LtCon($top, $Lt, $zIndex){
-  position: absolute;
-  top: $top;
-  left: $Lt;
-  z-index: $zIndex;
-}
-@mixin BtLtCon($Bt, $Lt, $zIndex){
-  position: absolute;
-  bottom: $Bt;
-  left: $Lt;
-  z-index: $zIndex;
-}
-@mixin BtRtCon($Bt, $Rt, $zIndex){
-  position: absolute;
-  bottom: $Bt;
-  right: $Rt;
-  z-index: $zIndex;
-}
-
-// flex
-@mixin flexArCtr($gap){
-  display: flex;
-  align-items: center;
-  gap: $gap;
-}
-@mixin flexCtr($gap){
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: $gap;
-}
-@mixin flexCol($gap){
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: $gap;
-}
-@mixin flexCol02($gap){
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: $gap;
-}
-@mixin flexCol03($gap){
-  display: flex;
-  flex-direction: column;
-  gap: $gap;
-}
-@mixin flexCol04($gap){
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: $gap;
-}
-@mixin flexSb($gap){
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: $gap;
-}
-@mixin flexSa($gap){
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: $gap;
-}
-@mixin flexFs($gap){
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: $gap;
-}
-
-// 말줄임
-@mixin ellipsis($line: 1) {
-  @if ($line == 1) {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }@else {
-    display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: $line;
-  }
-}
-
-
-// 공통영역
-@mixin close($top, $Rt, $zIndex){position: absolute;top: $top;right: $Rt;z-index: $zIndex;}
-.menuclose{@include close(42px, 46px, 0);}
-.mapclose{@include close(0, -20px, 10);width: 50px;height: 50px;background: #fff;}
-.subclose{@include close(15px, 20px, 1);}
-.entireclose{@include close(34px, 34.1px, 0);}
-
-// 온오프 체크 
-[class*="mark"]{@include LtCon(15px, 18px, 0);width: 6px;height: 6px;border-radius: 100px;border: 0;}
-.markOn{background: #36FF03;}
-.markOff{background: rgba(255, 255, 255, 0.5);}
-.markGy{background: #E0E0E0;}
-.markRd{background: #FF5358;}
-// 메시지 숫자 표기
-.-No{@include LtCon(-1px, 17.5px, 0);width: auto;padding: 1px 3.5px 1.5px;background: #FF5358;border-radius: 30px;}
-// 팝업 배경
-.layer{position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 9; display: flex; align-items: center; justify-content: center; background: rgba(0, 0, 0, 0.5);}
-.layer01{position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 4; display: flex; align-items: center; justify-content: center; background: #222;}
-
-// 팝업창 타이틀
-.popTit{@include flexCtr(0);width: 100%;padding: 15px 0;font-weight: 700;font-size: 16px;line-height: 100%;color: #000;border-bottom: 1px solid #eee;}
-// 우측 하단 팝업창
-@mixin popBtRt(){overflow: hidden;@include BtRtCon(0, 84px, 10);width: 375px;height: auto;max-height: 860px;color: #707070;background:#fff;border-radius: 20px 20px 0 0;}
-// 우측 하단 팝업창 컨테이너
-.popCon{
-  overflow-y: scroll;max-height: 844px;margin: 30px 10px 30px 0;padding: 0 15px 0 30px;
-}
-.popCon.ty-01{
-  @include flexCol03(20px);
-  max-height: 678px;
-  margin-bottom: 20px;
-  .Profile-set{    
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .Profile-con{@include flexArCtr(14px);}
-  .popCon [class*="btn-L"]{
-    width: 335px;
-    padding: 17px;
-    margin: 0 20px 20px;
-  }
-}
-.Profile-set{
-  @include flexSb(0);
-  .AroundIconBox{@include flexCtr(18px);}
-  .AroundLists{@include flexCtr(14px);}
-  .Profile-mark{@include LtCon(38px, 42px, 2);}
-  .markOn, .markOff{@include LtCon(39px, 42px, 2);width: 8px;height: 8px;border-radius: 100px;border: 0;}
-  .markOff{background: rgba(102, 102, 102, 0.2);}
-  .IDBox{
-    overflow: hidden;@include flexCol03(6px);font-weight: 500;font-size: 13px;line-height: 100%;color: #707070;
-    .ID{width: 94px;font-weight: 500;font-size: 17px;line-height: 100%;color: #000;}
-  }
-}
-// Around 프로필 이미지 공통 영역
-.allBtn{@include flexCtr(0);width: 50px;height: 48px;background: #8265F6;border-radius: 20px;font-weight: 800;font-size: 13px;line-height: 100%;color: #fff;}
-.Profile-set{
-  position: relative;@include flexCol(11px);align-items:unset;
-  .Profile-img{position: relative;width: 50px;height: 48px;border-radius: 20px;}
-  &::before{content: '';@include LtCon(0 , 0 , 1);width: 22px;height: 22px;margin-top: 32px;margin-left: 35px;background: #fff;border: 1px solid #fff;border-radius: 50px;}
-  .Profile-mark{@include LtCon(36px, 40px, 2);width: 12px;height: 12px;}
-}
-
-.AroundAll.ClientListAll{transform: translateY(-50%);}
-.Around, .AroundAll, .Emoji{@include popBtRt();}
-// 우측 중앙 팝업창
-@mixin popCenter(){overflow: hidden;@include RtCon(50%, 84px, 10);transform: translateY(-50%);border-radius: 20px;width: 375px;height: auto;max-height: 860px;color: #707070;background:#fff;}
-.popCenter, .Chat, .ProfileView, .Voters{@include popCenter();}
-// 메인 중앙 팝업창
-@mixin CenterCon(){@include LtCon(50%, 50%, 10);transform: translate(-50%, -50%);width: 787px;max-height:800px;overflow: hidden;background: #FFFFFF;box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);border-radius: 20px;}
-.CtPop{@include CenterCon();}
-.ConsProduce, .ConsEntrance, .NpcInstlReg, .Npc-instl, .Npc-guide, .Invite, .Announcement, .MyProfile, .MyFriend, .Follow, .Message, .MessageInner, .MyActivity, .MySetting{@include CenterCon();}
-// 메인 중앙 팝업창
-@mixin CenterCon2(){@include LtCon(50%, 50%, 10);transform: translate(-50%, -50%);width: 335px; max-height:100%;overflow: hidden;background: #FFFFFF;border-radius: 10px;}
-// 메인 중앙 팝업창 하단 공통 영역
-.PopFooter{
-  @include flexSa(0);width: 100%;padding: 20px 0;background: #F8F8F8;
-  button{
-    position: relative;@include flexCol(6px);
-    .markRd{top: 0.5px;left: 19.7px;width: 5.16px;height: 5.16px;}
-  }
-}
-// 상단 중앙 팝업창
-@mixin popTopCenter(){@include LtCon( 0, 50%, 11);transform: translateX(-50%);}
-.TopCtPop{@include popTopCenter();}
 .ScreenShare{
   width: 608px;
   height: 466px;
@@ -302,176 +30,20 @@ html {
     }
   }
 }
-// 포인트 박스
-.Point{@include flexCtr(3px);padding: 7px 13px 8px;background: linear-gradient(272.69deg, #10DFA8 -7.79%, #6F0EEC 35.92%, #A93AFC 73.24%, #F659FF 103.12%);border-radius: 99px;}
-// 마이 프로필 인풋 공통영역
-.form-list{
-  @include flexCol03(24px);font-family: 'Noto Sans CJK KR';font-style: normal;
-  .form-label{display: flex;gap: 6px;}
-  .form-group{
-    @include flexSb(0);padding-bottom: 8px;border-bottom: 1px solid #E6E8F1;
-    .form-control{
-      padding-left: 5px;border: 0;
-      &::placeholder{font-weight: 400;font-size: 13px;line-height: 100%;color: rgba(0, 0, 0, 0.15);}
-    }
-  }
-}
-// 마이 프로필 인풋 버튼 공통영역
-@mixin form-btn($color, $border){@include flexCtr(0);width: 56px;padding: 9px 0;background: #fff;border-radius: 999px;font-weight: 500;font-size: 13px;color: $color;border: 1px solid $border;}
+
 .form-btn{@include form-btn(#ddd, #ddd);}
 .form-btn.on{@include form-btn(#8265F6, #8265F6);}
 .form-btn-data{@include form-btn(#777,#ddd); flex-shrink: 0;}
+
 // 마이 프로필 유저 아이디
 .userID{@include ellipsis(1); width: 131px}
+
 // 마이 친구 버튼 공통 영역
 .followBtns{
   position: relative;
   @include flexCtr(12px);
 }
 
-// 공통 버튼
-button[class*="sec-btn"]{position: relative; width: 100px;padding: 12px;background: #FFFFFF;border: 1px solid #DDDDDD;border-radius: 999px;}
-button[class*="100"]{width: 100%;border-radius: 0;}
-button[class*="-L"]{width: 335px;padding: 18px;}
-button[class*="-M"]{width: 162px;padding: 19px;}
-button[class*="on02"]{color: #fff;border: 1px solid #8265F6;background:#8265F6;}
-button[class*="on01"]{color: #8265F6;border: 1px solid #8265F6;}
-button[class*="off01"]{color: #ddd;border: 1px solid #ddd;}
-button[class*="off02"]{border: 1px solid #bbb;}
-button[class*="off03"]{background: #eee;color: #fff;border: 1px solid #eee;}
-button[class*="off04"]{background: #eee;color: #373C45;opacity: 0.4;border: 1px solid #eee;}
-button[class*="off05"]{background: #F0F0F0;;color: #333333;border: 0;}
-
-.sec-btn.on{color: #8265F6;border: 1px solid #8265F6;}
-.sec-btn.on-02{color: #fff;border: 1px solid #8265F6;background:#8265F6;}
-.sec-btn.off{color: #ddd;border: 1px solid #ddd;}
-.sec-btn.off-02{border: 1px solid #bbb;}
-.sec-btn.plus{padding-left: 20px;color: #8265F6;border: 1px solid #8265F6;}
-// .plus::before{content:'';@include bg('plus-pu');@include LtCon(15px, 18px, 0); width: 10px;height: 10px;}
-// .Reg-btn{width: 335px;padding: 18px 0 17px 0;margin-bottom: 30px;}
-.Lbtns{
-  @include flexCtr(11px);
-  button{
-    width: 162px;
-    padding: 19px 0 20px;
-  }
-}
-// .center{display: flex;justify-content: center;align-items: center;}
-// 메세지 팝업 공통 영역
-.con-wrap{
-  @include flexCol02(0);overflow: hidden;height: auto;max-height: 679px;padding: 20px 5px 20px 70px;
-  .con-inner{overflow-y: scroll;overflow-x: hidden;display: flex;gap: 40px;max-height: 589px;padding: 0px 61px 0 0;}
-  .con-inner-col{
-    @include flexCol03(15px);overflow-y: scroll;overflow-x: hidden;max-height: 589px;padding: 0px 61px 0 0;
-    li{@include flexArCtr(0);transition: all ease .3s 0s;}
-  }
-  // 프로필 이미지/아이디 세트 공통영역
-  .Profile-box{
-    @include flexArCtr(12px);margin-right: 150px;transition: all ease .3s 0s;
-    
-    .Profile-set::before{display: none;}
-    .Profile-set{
-      position: relative;display: flex;flex-wrap: wrap;gap: 2px;width: 60px;height: 60px;border-radius: 20px;
-      img{width: 60px;height: 60px;}
-      .Profile-check-bg{@include BtRtCon(-3px , -5px , 1);width: 22px;height: 22px;background: #fff;border: 1px solid #fff;border-radius: 50px;}
-      [class*="mark"]{width: 10px;height: 10px;top: 47px;left: 49px;z-index: 1;}
-    }
-    .Profile-set.img-set4 img{width: 28px;height: 28px;border-radius: 10px;}
-    .Profile-set.img-set2{
-      img{width: 38px;height: 38px;border-radius: 14px;}
-      img:last-child{@include LtCon(20px, 22px,0);border: 2px solid #fff;}
-    }
-    .IDBox{
-      @include flexCol02(7px);
-      .message-txt{width: 379px;@include ellipsis(2); line-height: 120%;}
-    }
-  }
-}
-.form-check{
-  position: absolute;
-  bottom: 32px;
-  right: 40px;
-  z-index: 1;
-  input[type="checkbox"] + label:before { 
-    content: ' ';
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    text-align: center; 
-    vertical-align: middle;
-    background: #fff;
-    border: 1px solid #E2E2E2;
-    border-radius : 3px;
-    margin-right: 6px;
-  }
-  input[type="checkbox"]:checked + label:before {  
-    content: '\2714';  
-    color: #8265F6;
-  }
-}
-
-//토글 박스
-.toggle_box{
-  @include flexArCtr(10px);
-  label {
-    right: 9px;
-    bottom: 9px;
-    display: flex;
-    align-items: center;
-    span {
-      order: 0;
-      color: #fff;
-      font: {
-        size: 20px;
-        weight: 500;
-      };
-      margin-right: 10px;
-    }
-  
-    input {
-      &:checked ~ i {
-        &::before {
-          background-color: #8265F6;
-        }
-  
-        &::after {
-          transform: translateX(100%);
-        }
-      }
-    }
-    i {
-      position: relative;
-      display: block;
-      width: 37px;
-      height: 20px;
-  
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 14px;
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-color: #D0D0D0;
-        transition: background-color 0.3s;
-      }
-  
-      &::after {
-        content: '';
-        position: relative;
-        display: block;
-        width: 14px;
-        height: 14px;
-        margin: 3px;
-        border-radius: 10px;
-        background-color: #fff;
-        transition: transform 0.3s;
-      }
-    }
-  }
-}
 // 모바일 이동 버튼
 .moving-pad {
   position: absolute; 
@@ -510,26 +82,6 @@ button[class*="off05"]{background: #F0F0F0;;color: #333333;border: 0;}
   }
 }
 
-// 알수없는 버튼 모음 박스
-.UnKnowBtn{
-  overflow-y: scroll;overflow-x: hidden;@include LtCon(50%, 50%, 4);transform: translate(-50%, -50%);width: 50%;height: 500px;background: #d2d2d2;
-  .Btns{display: flex;flex-wrap: wrap;gap: 10px;padding: 30px;}
-  .Btns button{padding: 5px;background: #4cdcd0;}
-}
-
-// 메인 우측바
-.RtBar{
-  overflow: hidden;overflow-y:auto;@include RtCon(0, 0, 11);@include flexCol(0);justify-content: space-between;width: 64px;height: 100vh;padding: 50px 13px 50px 12px;background: rgba(0, 0, 0, 0.5);
-  div{@include flexCol(20px);}
-    button {position: relative;@include flexCol(10px);}
-    .pfp{width: 24px;border-radius: 100px;border: 2px solid #fff;}
-}
-// 메인 좌측상단 박스
-.LtTopBar{
-  @include LtCon(0, 0, 5);@include flexArCtr(35px);width: 100%;height: 60px;padding: 20px;
-  .loc{@include flexArCtr(7px);padding-top: 4px;}
-  &::before{content: '';background: linear-gradient(180.37deg, rgba(0, 0, 0, 0.5) 0.32%, rgba(0, 0, 0, 0) 89.25%);opacity: 0.7;width: 100%;height: 120px;@include BtLtCon(-20px, 0, -1);}
-}
 // 참여모드 메인 좌측상단 박스
 .RtTopBar{
   @include RtCon(20px, 84px, 5);@include flexCol(6px);
@@ -566,26 +118,6 @@ button[class*="off05"]{background: #F0F0F0;;color: #333333;border: 0;}
     .stop12, .play12{width: 25px;height: 14px;}
   }
 }
-// 메인 하단 바
-.BtBar{
-  @include BtLtCon(20px, 50%, 6);transform: translateX(-50%);@include flexCol(0);width: 100%;
-  &::before{content: '';@include BtLtCon(-20px, 0, -2);width: 100%;height: 120px;transform: rotate(-180deg);background: linear-gradient(180.37deg, rgba(0, 0, 0, 0.5) 0.32%, rgba(0, 0, 0, 0) 89.25%);opacity: 0.7;}
-  .sayBox{width: 252.8px;height: 53.58px;margin-bottom: 10.42px;}
-  .sayBoxCon{
-    overflow: hidden;@include flexCtr(6px);padding: 16px 18px 22px;@include bg('sayBox');
-    font-weight: 500;font-size: 13px;line-height: 100%;color: #fff;
-    .sayIcon{width: 17px;height: 17px;border-radius: 5px;}
-    .say{@include ellipsis(1);}
-  }
-  .BtBarCon{
-    @include flexCtr(30px);
-    font-weight: 500;
-    font-size: 11px;
-    line-height: 100%;
-    color: #fff;
-    button{@include flexCol(5px);}
-  }
-}
 
 // 좌측상단 메뉴 버튼
 .Menu{
@@ -603,6 +135,7 @@ button[class*="off05"]{background: #F0F0F0;;color: #333333;border: 0;}
     }
   }
 }
+
 // 로그인
 .Alarm.LogIn {
   width: 335px;
@@ -637,6 +170,7 @@ button[class*="off05"]{background: #F0F0F0;;color: #333333;border: 0;}
     .apple::before{@include bg('apple30');}
   }
 }
+
 // 이메일로 로그인 
 .Alarm.ELogin{
   width: 335px;
@@ -677,6 +211,7 @@ button[class*="off05"]{background: #F0F0F0;;color: #333333;border: 0;}
     }
   }
 }
+
 // 비밀번호 재설정
 .Alarm.PwReset{
   padding-bottom: 20px;
@@ -723,6 +258,7 @@ button[class*="off05"]{background: #F0F0F0;;color: #333333;border: 0;}
   width: 305px;
  }
 }
+
 // 좌측상단 지도 버튼
 .Map{
   @include LtCon(0, 0, 10);display: flex;width: 1093px;height: 100vh;
@@ -734,56 +270,56 @@ button[class*="off05"]{background: #F0F0F0;;color: #333333;border: 0;}
     .MapSearchBox{
       position: relative;
       &::before{content: '';@include bg('location12');@include LtCon(17px, 20px, 0);width: 12px;height: 12px;}
-        input{width: 100%;height: 44px;padding: 0 60px 0 44px;border: 2px solid #ddd;border-radius: 99px;color: #333;}
-        input::placeholder{font-weight: 500;font-size: 16px;line-height: 100%;color: #ddd;}
-        button{@include RtCon(10px, 21px, 0)}
-      }
+      input{width: 100%;height: 44px;padding: 0 60px 0 44px;border: 2px solid #ddd;border-radius: 99px;color: #333;}
+      input::placeholder{font-weight: 500;font-size: 16px;line-height: 100%;color: #ddd;}
+      button{@include RtCon(10px, 21px, 0)}
     }
-    .SearchList{
-      @include flexArCtr(5px);padding-top: 15px;font-weight: 500;font-size: 13px;line-height: 100%;color: #6623E3;
-      li{position: relative;width: 145px;padding: 14px 31px 13px 17px;border: 1px solid #6623E3;border-radius: 99px;
-        p{@include ellipsis(1);}
-        button{@include RtCon(8px, 12px, 0)}
-      }
+  }
+  .SearchList{
+    @include flexArCtr(5px);padding-top: 15px;font-weight: 500;font-size: 13px;line-height: 100%;color: #6623E3;
+    li{position: relative;width: 145px;padding: 14px 31px 13px 17px;border: 1px solid #6623E3;border-radius: 99px;
+      p{@include ellipsis(1);}
+      button{@include RtCon(8px, 12px, 0)}
     }
-    .MapLists{
-      @include flexCol(0);justify-content: unset;overflow-y: scroll;overflow-x: hidden;height: 100%;margin: 20px 0;padding-right: 7px;font-weight: 400;font-size: 13px;line-height: 100%;color: #707070;
-      li{@include flexSb(0);width: 100%;padding: 15px 0;border-bottom: 1px solid rgba(238, 238, 238, 0.6);
-        .bldgImg{width: 60px;height: 60px;border-radius: 20px;}
-        .MapList{
-          @include flexCtr(12px);
-          .titDesc{width: 115px;@include ellipsis(1);}
-          .tit{@include flexArCtr(5px);width: 132px;
-            p{@include ellipsis(1);}
-          }
-        }
-      }
-    }
-    .MapScreen{
-      position: relative;width: 1043px;height: 1080px;margin-top: -1118px;z-index: -1;overflow: hidden;@include bg('mapBg', $format: "png");
-      .locationTxt{
-        @include LtCon(233px, 788px, 0);padding-right: 12px;
-        p{@include ellipsis(1);}
-        button{@include flexArCtr(5px);@include LtCon(0, 0, 0);width: 210px;padding-right: 12px;height: 40px;background: #FFFFFF;border-radius: 99px;font-weight: 700;font-size: 15px;line-height: 100%;color: #333333;
-          &:before{content: "";@include bg('blTail');@include LtCon(38px, 13px, 0);width: 14px;height: 6px;}
-        }
-      }
-      .currentLoc{
-        @include LtCon(496px, 611px, 0);@include flexArCtr(3px);width: 95px;height: 40px;background: linear-gradient(269.81deg, #A371FF 0%, #1593FC 51.58%, #5FC1FF 97.22%);border-radius: 99px;font-weight: 700;font-size: 15px;line-height: 100%;color: #FFFFFF;
-        .currentLocBg{@include bg('currentLoc');width: 40px;height: 64px;margin-top: 24px;
-          img{width: 32px;height: 32px;margin: 4px;border-radius: 100px;}
-        }
-      }
-      .MapScreenBtns{
-        @include BtRtCon(30px, 30px, 0);@include flexCol(10px);
-        .zoomInOut{@include flexCol(0);justify-content: space-around;width: 40px;height: 80px;background: #fff;border-radius: 10px;}
-        .currentLocBtn{
-          position: relative;
-          &::before{content: '';@include LtCon(0, 0, -1);width: 40px;height: 40px;background: #fff;border-radius: 100px;}
+  }
+  .MapLists{
+    @include flexCol(0);justify-content: unset;overflow-y: scroll;overflow-x: hidden;height: 100%;margin: 20px 0;padding-right: 7px;font-weight: 400;font-size: 13px;line-height: 100%;color: #707070;
+    li{@include flexSb(0);width: 100%;padding: 15px 0;border-bottom: 1px solid rgba(238, 238, 238, 0.6);
+      .bldgImg{width: 60px;height: 60px;border-radius: 20px;}
+      .MapList{
+        @include flexCtr(12px);
+        .titDesc{width: 115px;@include ellipsis(1);}
+        .tit{@include flexArCtr(5px);width: 132px;
+          p{@include ellipsis(1);}
         }
       }
     }
   }
+  .MapScreen{
+    position: relative;width: 1043px;height: 1080px;margin-top: -1118px;z-index: -1;overflow: hidden;@include bg('mapBg', $format: "png");
+    .locationTxt{
+      @include LtCon(233px, 788px, 0);padding-right: 12px;
+      p{@include ellipsis(1);}
+      button{@include flexArCtr(5px);@include LtCon(0, 0, 0);width: 210px;padding-right: 12px;height: 40px;background: #FFFFFF;border-radius: 99px;font-weight: 700;font-size: 15px;line-height: 100%;color: #333333;
+        &:before{content: "";@include bg('blTail');@include LtCon(38px, 13px, 0);width: 14px;height: 6px;}
+      }
+    }
+    .currentLoc{
+      @include LtCon(496px, 611px, 0);@include flexArCtr(3px);width: 95px;height: 40px;background: linear-gradient(269.81deg, #A371FF 0%, #1593FC 51.58%, #5FC1FF 97.22%);border-radius: 99px;font-weight: 700;font-size: 15px;line-height: 100%;color: #FFFFFF;
+      .currentLocBg{@include bg('currentLoc');width: 40px;height: 64px;margin-top: 24px;
+        img{width: 32px;height: 32px;margin: 4px;border-radius: 100px;}
+      }
+    }
+    .MapScreenBtns{
+      @include BtRtCon(30px, 30px, 0);@include flexCol(10px);
+      .zoomInOut{@include flexCol(0);justify-content: space-around;width: 40px;height: 80px;background: #fff;border-radius: 10px;}
+      .currentLocBtn{
+        position: relative;
+        &::before{content: '';@include LtCon(0, 0, -1);width: 40px;height: 40px;background: #fff;border-radius: 100px;}
+      }
+    }
+  }
+}
 
 // 메인 하단 채팅 버튼
 .Chat{
@@ -847,15 +383,13 @@ button[class*="off05"]{background: #F0F0F0;;color: #333333;border: 0;}
   }
 }
 
-
-
- 
 // 메인 하단 이모티콘 버튼
 .Emoji{
   .EmojiCon {margin: 0; padding: 30px 15px 30px 30px;}
   .EmojiCon p{padding-bottom:16px;}
   .EmojiList{@include flexArCtr(20px);}
 }
+
 // 메인 하단 이모티콘-확대창 버튼
 .EmojiAll .EmojiList{flex-wrap: wrap;}
 
@@ -981,6 +515,7 @@ button[class*="off05"]{background: #F0F0F0;;color: #333333;border: 0;}
     .toggle-btnOn{background: #8265F6;font-weight: 700;font-size: 16px;line-height: 100%;text-align: center;color: #FFFFFF;}
   }
 }
+
 .Message{
   .con-wrap{padding: 20px 5px 20px 0;}
   .con-wrap .con-inner-col li{padding-left: 71px;}
@@ -1029,162 +564,63 @@ button[class*="off05"]{background: #F0F0F0;;color: #333333;border: 0;}
   .board-area .board-list tr.toggle-contents.show {display: table-row;}
   .board-area .board-list tr.selected td {border-bottom: 0;}
 }
-  .MySetting{
-    .cam-view .cam-box {
-      position: relative;@include flexCol(0);justify-content: flex-end; width: 315px;height: 186px;margin-bottom: 30px;background-color: #f2f3f8;border: 1px solid #eee;border-radius: 20px;
-      .video{width: 100%; height: 100%; background: black;background: #f2f3f8;border-radius: 20px;}
-    }
-    .cam-box-btns{
-      position: absolute;bottom: 12px;
-      @include flexCtr(9px);    
-      button{@include flexCtr(0);width: 26px;height: 26px;background: #fff;border-radius: 50%;}
-    }
-    .downArrow{top: 2px;right: 14px;}
-    .con-wrap{padding-bottom: 33px;}
-    .con-right{
-      padding-top: 46px;
-      .ui-dropdown{position: relative;width: 290px;height: 26px;padding: 0 30px 14px 10px;text-align: left;color: #222;border-bottom: 1px solid #eee;background-color: #fff;white-space: nowrap;
-        .dropdown-layer {overflow-y: scroll;overflow-x: hidden;display: flex;flex-direction: column;@include LtCon(25px, 0, 1);width: 100%;height: auto;max-height: 105px;background: #fff;border: 1px solid #E6E8F1;border-radius: 0px 0px 10px 10px;
-          button{text-align: left;padding: 10px 13px;
-            &:hover{background: rgba(245, 245, 245, 0.6);}
-          }
+.MySetting{
+  .cam-view .cam-box {
+    position: relative;@include flexCol(0);justify-content: flex-end; width: 315px;height: 186px;margin-bottom: 30px;background-color: #f2f3f8;border: 1px solid #eee;border-radius: 20px;
+    .video{width: 100%; height: 100%; background: black;background: #f2f3f8;border-radius: 20px;}
+  }
+  .cam-box-btns{
+    position: absolute;bottom: 12px;
+    @include flexCtr(9px);    
+    button{@include flexCtr(0);width: 26px;height: 26px;background: #fff;border-radius: 50%;}
+  }
+  .downArrow{top: 2px;right: 14px;}
+  .con-wrap{padding-bottom: 33px;}
+  .con-right{
+    padding-top: 46px;
+    .ui-dropdown{position: relative;width: 290px;height: 26px;padding: 0 30px 14px 10px;text-align: left;color: #222;border-bottom: 1px solid #eee;background-color: #fff;white-space: nowrap;
+      .dropdown-layer {overflow-y: scroll;overflow-x: hidden;display: flex;flex-direction: column;@include LtCon(25px, 0, 1);width: 100%;height: auto;max-height: 105px;background: #fff;border: 1px solid #E6E8F1;border-radius: 0px 0px 10px 10px;
+        button{text-align: left;padding: 10px 13px;
+          &:hover{background: rgba(245, 245, 245, 0.6);}
         }
       }
     }
-    .ct-title {margin-bottom: 20px; color: #111; font-size: 16px; font-weight: 700; }
-    .ct-title-sm {margin-bottom: 19px; color: #000; font-size: 13px; font-weight: 500; line-height: 16px;}
-    // .cam-view .cam-box {position: relative; @include flexCol04(0);width: 315px; height: 186px; margin-bottom: 30px; background-color: #f2f3f8; border: 1px solid #eee; border-radius: 20px;}
-    .cam-view .cam-box p {
-      position: absolute;
-    top: 79px;
-      width: 119px; padding: 8px 0; background-color: #fff; border-radius: 16px; color: #000; 
-      font-size: 13px; font-weight: 500; text-align: center; line-height: 1; box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.05); 
-      backdrop-filter: blur(5px);
-    }
-    .cam-view .cam-notice {font-size: 13px; font-weight: 400; color: #666; }
-    .cam-view .cam-notice>span {display: block; margin-top: 10px; font-size: 10px; font-weight: 400; color: #666; line-height: 1.4;}
-    .ui-dropdown {position: relative; margin-bottom: 20px; font-size: 11px;}
-    .ui-dropdown .dropdown-trigger {position: relative; width:290px; height: 26px; padding:0 30px 14px 10px; text-align: left; color: #222; border-bottom: 1px solid #eee; background-color: #fff; white-space: nowrap;}
   }
-
-
-@mixin AlarmCon(){
-  @include LtCon(50%, 50%, 10);
-  transform: translate(-50%, -50%);
-  width: 335px;
-  max-height: 800px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+  .ct-title {margin-bottom: 20px; color: #111; font-size: 16px; font-weight: 700; }
+  .ct-title-sm {margin-bottom: 19px; color: #000; font-size: 13px; font-weight: 500; line-height: 16px;}
+  // .cam-view .cam-box {position: relative; @include flexCol04(0);width: 315px; height: 186px; margin-bottom: 30px; background-color: #f2f3f8; border: 1px solid #eee; border-radius: 20px;}
+  .cam-view .cam-box p {
+    position: absolute;
+    top: 79px;
+    width: 119px; padding: 8px 0; background-color: #fff; border-radius: 16px; color: #000; 
+    font-size: 13px; font-weight: 500; text-align: center; line-height: 1; box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(5px);
+  }
+  .cam-view .cam-notice {font-size: 13px; font-weight: 400; color: #666; }
+  .cam-view .cam-notice>span {display: block; margin-top: 10px; font-size: 10px; font-weight: 400; color: #666; line-height: 1.4;}
+  .ui-dropdown {position: relative; margin-bottom: 20px; font-size: 11px;}
+  .ui-dropdown .dropdown-trigger {position: relative; width:290px; height: 26px; padding:0 30px 14px 10px; text-align: left; color: #222; border-bottom: 1px solid #eee; background-color: #fff; white-space: nowrap;}
 }
-@mixin MsgCon(){
-  @include LtCon(50%, 50%, 10);
-  transform: translate(-50%, -50%);
-  width: 579px;
-  height: 165px;
-  overflow: hidden;
-  background: #fff;
-  border-radius: 10px;
-}
+
 .MsgCon{
   @include MsgCon();
-padding: 30px 30px 20px;
-text-align: left;
-.sec-btns{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 53px;
-  padding-top: 50px;
-}
-}
-.Alarm {
-  @include AlarmCon();
-  text-align: center;
-  dl {
-    padding: 30px 17px;
-  }
-  dt {
-    position: relative;
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 100%;
-    color: #222222;
-    padding-bottom: 11px;
-  }
-  dd{position: relative;}
-  .write-box{
-    width: 100%;
-    padding: 17px 18px 15px;
-    text-align: left;
-    border: 1px solid #E2E2E2;
-    border-radius: 20px;
-    background: #fff;
-    &::placeholder{font-weight: 400;font-size: 15px;line-height: 100%;color: rgba(0, 0, 0, 0.3);}
-  }
-  .Dday{
-    padding: 0;
-    width: 100%;
-    height: 60px;
-    @include flexCtr(31px);
-    div{
-      @include flexCtr(6px);
-      textarea{
-        width: 70px;
-        height: 60px;
-        padding: 13px;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 100%;
-        color: #8265F6;
-        &::placeholder{
-          font-weight: 700;
-          font-size: 32px;
-          line-height: 100%;color: rgba(0, 0, 0, 0.3);}
-      }
-      p{font-weight: 400;
-        font-size: 13px;
-        line-height: 100%;
-        color: rgba(0, 0, 0, 0.8);
-      }
-    }
-  }
-  .sec-time{
-    @include RtCon(19px, 20px, 0);
-  }
-  .sec-desc{
+  padding: 30px 30px 20px;
+  text-align: left;
+  .sec-btns{
     display: flex;
-    padding-top: 8px;
-  }
-  .Alarm-Btns {
-    width: 100%;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 100%;
-    button {
-      padding: 18.5px;
-      width: 50%;
-    }
-    button:first-child {
-      color: #333;
-      background: #E5E5E5;
-      border-radius: 0px 0px 0px 10px;
-    }
-    button:last-child {
-      color: #fff;
-      background: #8265F6;
-      border-radius: 0px 0px 10px 0px;
-    }
+    justify-content: flex-end;
+    align-items: center;
+    gap: 53px;
+    padding-top: 50px;
   }
 }
 
 .MessageInner{
-font-weight: 500;
-font-size: 13px;
-line-height: 100%;
-color: #333333;
-.con-wrap{padding: 0 5px 0 0;}
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 100%;
+  color: #333333;
+  .con-wrap{padding: 0 5px 0 0;}
   .ChatCon{
     position: relative;@include flexCol03(20px);max-height: 760px;padding: 30px 5px 20px 50px;
     .ChatInner{
@@ -1223,27 +659,28 @@ color: #333333;
       color: #999999;
       &::before{content: '';@include LtCon(7px, 0, 0);width: 275px;height: 1px;background: #eee;}
       &::after{content: '';@include RtCon(7px, 0, 0);width: 275px;height: 1px;background: #eee;}
+    }
+  }
+  .ChatMessage{
+    display: flex;padding: 5px 62px 7px;border-top: 1px solid #EEEEEE;
+    .MessageBox {
+      @include flexSb(7px);width: 100%;height: 28px;padding: 8px 4px 7px 12px;position: relative;border: 1px solid #EEEEEE;border-radius: 29px;
+      & .messageInput {
+        background: none;border: none;outline: none !important;resize: none;width: 70%;height: 20px;padding: 3px 0;
+        &::placeholder{@include flexCtr(0);}
+      }
+      .MessageBoxBtn{
+        @include flexCtr(7px);height: 100%;padding-right: 26px;border-right: 1px solid rgba(221, 221, 221, 0.8);
+        .downArrow{top: 14px;left: 46px;right: 0;}
       }
     }
-    .ChatMessage{
-      display: flex;padding: 5px 62px 7px;border-top: 1px solid #EEEEEE;
-      .MessageBox {
-        @include flexSb(7px);width: 100%;height: 28px;padding: 8px 4px 7px 12px;position: relative;border: 1px solid #EEEEEE;border-radius: 29px;
-        & .messageInput {
-          background: none;border: none;outline: none !important;resize: none;width: 70%;height: 20px;padding: 3px 0;
-          &::placeholder{@include flexCtr(0);}
-        }
-        .MessageBoxBtn{
-          @include flexCtr(7px);height: 100%;padding-right: 26px;border-right: 1px solid rgba(221, 221, 221, 0.8);
-          .downArrow{top: 14px;left: 46px;right: 0;}
-        }
-      }
-      .Message-toggle{
-        @include BtLtCon(0, 0, 0);display: flex;flex-direction: column;align-items: flex-start;justify-content: center;gap: 21px;width: 94px;height: 79px;padding: 12px 16px;background: #FFFFFF;border: 1px solid #EEEEEE;box-shadow: 2px 2px 3px rgba(153, 153, 153, 0.15);border-radius: 12px;
-        button:hover {color: #62BD53;}
-      }
+    .Message-toggle{
+      @include BtLtCon(0, 0, 0);display: flex;flex-direction: column;align-items: flex-start;justify-content: center;gap: 21px;width: 94px;height: 79px;padding: 12px 16px;background: #FFFFFF;border: 1px solid #EEEEEE;box-shadow: 2px 2px 3px rgba(153, 153, 153, 0.15);border-radius: 12px;
+      button:hover {color: #62BD53;}
     }
+  }
 }
+
 .msg-pfp{@include LtCon(8px, 12px, 0);width: 30px;height: 30px;border-radius: 30px;}
 
 // 공통
@@ -1266,7 +703,7 @@ color: #333333;
       height: 100px;
       margin-bottom: 17px;
       border: 1.056px solid #E6E8F1;
-     border-radius: 100px;
+      border-radius: 100px;
     }
   }
   .distance{
@@ -1275,87 +712,70 @@ color: #333333;
     padding: 7px 9px;
     background: #E6E8F1;
     border-radius: 999px;
-}
-.phone-number{
-  @include flexCtr(4px);
-  padding:7px 0 15px;
-}
-.copy17{
-  margin-top: -3px;
-}
-.Point{padding: 10px 14px;}
-.online{
-  @include flexCtr(0);
-  width: 73px;
-  height: 29px;
-  background: #fff;
-  border: 1px solid #E6E8F1;
-  border-radius: 16px;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 100%;
-  color: #333;
-  margin-bottom: 10px;
-  button{@include flexCtr(0);}
-  [class*="mark"]{position: relative;top: 0;left: 0;}
-  .onlineCon{
-    @include flexArCtr(4px);
-    button img{position: absolute;right: 9px;}
   }
-  .onlineList{
-    @include LtCon(28px, -2px, 0);@include flexCol02(11px);width: 121px;padding: 8px 12px;background: #fff;border: 1px solid #E6E8F1;border-radius: 14px;
-    li{@include flexArCtr(0);}
+  .phone-number{
+    @include flexCtr(4px);
+    padding:7px 0 15px;
   }
-}
-.offline{
-  @include LtCon(112px, 83px, 0);width: 119px;background: #666;color: #fff;border: 1px solid #666;
-  .onlineList{background: #666;}
-  .downArrowWt12{top: 8px;right: 11px;}
-}
-    .ProfileView-btns{
-      width: 219px;
+  .copy17{
+    margin-top: -3px;
+  }
+  .Point{padding: 10px 14px;}
+  .online{
+    @include flexCtr(0);
+    width: 73px;
+    height: 29px;
+    background: #fff;
+    border: 1px solid #E6E8F1;
+    border-radius: 16px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 100%;
+    color: #333;
+    margin-bottom: 10px;
+    button{@include flexCtr(0);}
+    [class*="mark"]{position: relative;top: 0;left: 0;}
+    .onlineCon{
+      @include flexArCtr(4px);
+      button img{position: absolute;right: 9px;}
+    }
+    .onlineList{
+      @include LtCon(28px, -2px, 0);@include flexCol02(11px);width: 121px;padding: 8px 12px;background: #fff;border: 1px solid #E6E8F1;border-radius: 14px;
+      li{@include flexArCtr(0);}
+    }
+  }
+  .offline{
+    @include LtCon(112px, 83px, 0);width: 119px;background: #666;color: #fff;border: 1px solid #666;
+    .onlineList{background: #666;}
+    .downArrowWt12{top: 8px;right: 11px;}
+  }
+  .ProfileView-btns{
+    width: 219px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 35px;
+    button{
+      position: relative;
       display: flex;
-      justify-content: space-around;
-      padding-top: 35px;
-      button{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        &:first-child::after{
-          content: '';
-          width: 1px;
-          height: 37px;
-          background: #D9D9D9;
-          position: absolute;
-          top: 0;
-          left: 69px;
-        }
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      &:first-child::after{
+        content: '';
+        width: 1px;
+        height: 37px;
+        background: #D9D9D9;
+        position: absolute;
+        top: 0;
+        left: 69px;
       }
     }
-    .LRBar::before, .LRBar::after{
-      top: 4px; height: 37px;
-    }
   }
-@mixin guidepop-01(){
-  @include LtCon(50%, 50%, 10);
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 12px;
-  @include flexCtr(0);
-  padding: 12px 27px;
+  .LRBar::before, .LRBar::after{
+    top: 4px; height: 37px;
+  }
 }
-@mixin guidepop-02(){
-  position: absolute;
-  // overflow: hidden;
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  border-radius: 50px;
-  @include flexCtr(0);
-}
+
 // 마이 페이지 폰번호 복사
 .Copypop {
   @include guidepop-01();
@@ -1402,9 +822,9 @@ color: #333333;
     p{
       margin: 80px 0 100px;
       font-weight: 400;
-    font-size: 30px;
-    line-height: 160%;
-    color: #fff;
+      font-size: 30px;
+      line-height: 160%;
+      color: #fff;
     }
     .sec-btn.on-02{
       width: 230px;
@@ -1421,10 +841,10 @@ color: #333333;
     }
     .swiper-pagination-bullet{
       width: 16px; height: 16px;
-      background: rgba(255, 255, 255, 0.2);opacity:1;
+      background: rgba(255, 255, 255, 0.2); opacity:1;
     }
     .swiper-pagination-bullet-active{
-background:#fff;
+      background:#fff;
     }
     .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
       margin:0 10px;
@@ -1437,6 +857,7 @@ background:#fff;
   text-align: center;
   padding: 30px;
 }
+
 // 공지사항
 .Announcement {
   .con-wrap {
@@ -1496,6 +917,7 @@ background:#fff;
     right: var(--swiper-navigation-sides-offset, 57px);
   }
 }
+
 .Announcement02 {
   @include flexArCtr(0);
 
@@ -1540,8 +962,6 @@ background:#fff;
   .swiper-rtl .swiper-button-next {
     top: 35%;
   }
-
-  ;
 
   // 이미지 등록
   .img_box {
@@ -1636,6 +1056,7 @@ background:#fff;
     }
   }
 }
+
 .Voters{
   .popCon{
     @include flexCol03(20px);
@@ -1701,6 +1122,7 @@ background:#fff;
     line-height: 150%;
   }
 }
+
 .skip-btn{
   @include BtRtCon(15px, 36px, 0);
   font-weight: 500;
@@ -1711,13 +1133,6 @@ background:#fff;
       @include RtCon(0, -15px, 0)
     }
 }
-
-@mixin scroll($max-height){
-  overflow-y: scroll;
-  overflow-x: hidden;
-  max-height: $max-height;
-}
-
 
 .write-con{
   color: #222;
@@ -1739,6 +1154,7 @@ background:#fff;
     }
   }
 }
+
 // npc 설치
 .Npc-instl {
   @include flexCol(0);
@@ -1821,6 +1237,7 @@ background:#fff;
     gap: 25px;
   }
 }
+
 // 상담 등록
 .ConsProduce{
   .con-wrap{padding-right: 0;}
@@ -1851,6 +1268,7 @@ background:#fff;
     textarea::placeholder{font-weight: 400;color: rgba(0, 0, 0, 0.15);}
   }
 }
+
 .requesting{
   @include flexArCtr(197px);
   padding-bottom: 40px;
@@ -1859,11 +1277,13 @@ background:#fff;
 
   }
 }
+
 .ConsEntrance.ty-01{
   width: 660px;
   padding-bottom: 30px;
   .con-wrap{padding-left: 80px;}
 }
+
 .ConsEntrance.ty-01 .con-inner-col{
   padding: 0;
   text-align:unset;
@@ -1911,6 +1331,7 @@ background:#fff;
     button{@include flexCtr(0);width: 26px;height: 26px;background: #fff;border-radius: 50%;}
   }
 }
+
 .ConsProduce-inner{
   padding-top: 40px;
   .write-con.consCode{
@@ -1934,31 +1355,24 @@ background:#fff;
     
   }
 }
+
 .ConsProduce.ty-02 {
   .con-wrap{padding-bottom: 0;}
 }
+
 .Copypop-bk{
   width: 335px;
-height: 44px;
-background: rgba(0, 0, 0, 0.8);
-border-radius: 5px;
-font-weight: 400;
-font-size: 13px;
-line-height: 100%;
-color: #fff;
-@include LtCon(112px, 0, 1);
-@include flexCtr(0);
-}
-.Alarm.ty-02{
-  width: 500px;
-  dl{padding-bottom: 22px;}
-  dt{margin-bottom:11px;}
-  dd{line-height:100%;word-break: keep-all;}
-  dd:nth-of-type(2){padding: 20px 0 11px;}
-  dd:nth-of-type(3){width: 330px;margin: 0 auto;}
+  height: 44px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  color: #fff;
+  @include LtCon(112px, 0, 1);
+  @include flexCtr(0);
 }
 
-.none{display: none;}
 .PrivateScreen.Study_Screen{
   z-index: 5;
   height: 86%;
@@ -1966,6 +1380,7 @@ color: #fff;
     border-radius: 10px;
   }
 }
+
 .PrivateScreen.Library_Screen{
   [class*="pfp"]{
     background: rgba(0, 0, 0, 0.5);
@@ -1986,6 +1401,7 @@ color: #fff;
     color: #000;
   }
 }
+
 .PrivateScreen{
   @include LtCon(50%, 0, 10);
   transform: translateY(-50%);
@@ -1994,13 +1410,13 @@ color: #fff;
   height: 80%;
   border-radius: 20px;
   [class*="cam-con"]{
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  @include flexCtr(20px);
-  flex-flow: row wrap;
-  align-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    @include flexCtr(20px);
+    flex-flow: row wrap;
+    align-content: center;
   }
   .cam-con.ty01 .camScreen{
     width: 100%;
@@ -2011,79 +1427,79 @@ color: #fff;
     .camScreen{width: 50%;height: 500px;}
   } 
   .cam-con.ty03 .camScreen{
-      width: 710px;
-      height: 395px;
-    }
-    .cam-con.ty04{
-      align-content: center;
-      width: 1790px;
-      margin: 0 auto;
-      .camScreen{
-        width: 430px;
-        height: 250px;
-      }
-    }
+    width: 710px;
+    height: 395px;
   }
-  .cam-con{
-    video{    
-      background: #F2F3F8;
-      width: 100%;
-      height: 100%;
-      border-radius: 20px;
-    }
+  .cam-con.ty04{
+    align-content: center;
+    width: 1790px;
+    margin: 0 auto;
     .camScreen{
-      position: relative;
-      width: 100%;
-      height: 100%;
-      border: 1px solid rgba(238, 238, 238, 0.4);
-      border-radius: 20px;
-    }
-    .cam-desc{
-      padding: 20px 38px;
-      background: #fff;
-      box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.05);
-      border-radius: 999px;
-    }
-    .zoomOut{
-      width: 234px;
-      height: 132px;
-      border: 1px solid rgba(238, 238, 238, 0.4);
-      border-radius: 20px;
-      .cam-desc{
-       padding: 8px 20px;
-      }
-    }
-    [class*="pfp"]{ 
-      width: 30px;
-      height: 30px;
-      background: #fff; 
-      border-radius: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    [class*="topLt"]{
-      @include LtCon(20px, 20px, 0);
-    }
-    [class*="topRt"]{
-      @include RtCon(20px, 20px, 0);
-    }
-    [class*="btLt"]{
-      @include BtLtCon(20px, 20px, 0);
-      @include flexArCtr(10px);
-      text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
-    }
-    [class*="btRt"]{
-      @include BtRtCon(20px, 20px, 0);
-    }
-    [class*="center"]{
-      @include LtCon(50%, 50%, 0);
-      transform: translate(-50%, -50%);
-    }
-    .bottom-pfp{
-      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+      width: 430px;
+      height: 250px;
     }
   }
+}
+.cam-con{
+  video{    
+    background: #F2F3F8;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  .camScreen{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(238, 238, 238, 0.4);
+    border-radius: 20px;
+  }
+  .cam-desc{
+    padding: 20px 38px;
+    background: #fff;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.05);
+    border-radius: 999px;
+  }
+  .zoomOut{
+    width: 234px;
+    height: 132px;
+    border: 1px solid rgba(238, 238, 238, 0.4);
+    border-radius: 20px;
+    .cam-desc{
+      padding: 8px 20px;
+    }
+  }
+  [class*="pfp"]{ 
+    width: 30px;
+    height: 30px;
+    background: #fff; 
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  [class*="topLt"]{
+    @include LtCon(20px, 20px, 0);
+  }
+  [class*="topRt"]{
+    @include RtCon(20px, 20px, 0);
+  }
+  [class*="btLt"]{
+    @include BtLtCon(20px, 20px, 0);
+    @include flexArCtr(10px);
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  }
+  [class*="btRt"]{
+    @include BtRtCon(20px, 20px, 0);
+  }
+  [class*="center"]{
+    @include LtCon(50%, 50%, 0);
+    transform: translate(-50%, -50%);
+  }
+  .bottom-pfp{
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  }
+}
 
 // 화면보기 + 채팅창
 .PrivateScreen.ty01 {
@@ -2121,6 +1537,7 @@ color: #fff;
     }
   }
 }
+
 .MicCamSet{
   .con-inner-col{
     align-items: center;
@@ -2130,24 +1547,25 @@ color: #fff;
     @include flexCtr(0);
     position: relative;
     width: 387px;
-height: 236px;
-background: #F2F3F8;
-border: 1px solid #eee;
-border-radius: 20px;
-p {
-  @include LtCon(50%, 50%, 0);
-  transform: translate(-50%, -50%);
-    padding: 8px 30px; 
-    background: #fff; border-radius: 16px; color: #000; 
-    font-size: 13px; font-weight: 500; text-align: center; line-height: 1; box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.05); 
-  }
-  .cam-box-btns{
-    position: absolute;bottom: 12px;
-    @include flexCtr(9px);    
-    button{@include flexCtr(0);width: 26px;height: 26px;background: #fff;border-radius: 50%;}
-  }
+    height: 236px;
+    background: #F2F3F8;
+    border: 1px solid #eee;
+    border-radius: 20px;
+  p {
+    @include LtCon(50%, 50%, 0);
+    transform: translate(-50%, -50%);
+      padding: 8px 30px; 
+      background: #fff; border-radius: 16px; color: #000; 
+      font-size: 13px; font-weight: 500; text-align: center; line-height: 1; box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.05); 
+    }
+    .cam-box-btns{
+      position: absolute;bottom: 12px;
+      @include flexCtr(9px);    
+      button{@include flexCtr(0);width: 26px;height: 26px;background: #fff;border-radius: 50%;}
+    }
   }
 }
+
 .StudyStatus{
   .con-wrap{padding: 0;}
   .con-left{
@@ -2542,107 +1960,105 @@ p {
 
 .Alarm.CamFloat{
   width: 335px;
-height: 252px;
-background:#F2F3F8;
-video{
-  width: 100%;
-  height: 100%;
-}
-.no-camera{
-  display: flex;
-  align-items: center;
-  height: 29px;
-  padding: 0px 30px;
-  background: #fff;
-  border-radius: 15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 252px;
+  background:#F2F3F8;
+  video{
+    width: 100%;
+    height: 100%;
+  }
+  .no-camera{
+    display: flex;
+    align-items: center;
+    height: 29px;
+    padding: 0px 30px;
+    background: #fff;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
-}
 .BGM{
   .popCon{
     padding: 0 0 0 15px;
     margin: 0 10px 30px 0;
     max-height: 680px;
   }
-
   .bgm-container-top{
-  display:flex; align-items:center; justify-content:space-between; 
-  padding: 10px 10px 0;
-}
-
-.bgm-btn, .bgm-tab{display: flex;gap: 5px;}
-.bgm-btn button{
-  width: 38px;
-height: 38px;
-border: 1px solid #DDDDDD;
-border-radius: 50%;
-}
-.bgm-tab button{
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 100%;
-  width: unset;
-  padding:12px 21px 10px;
-}
-.board-list thead{
-  background: #F6F6F6;
-  border-radius: 5px;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 100%;
-  color: rgba(34, 34, 34, 0.5);
-  opacity: 0.8;
-  width: 355px;
-  margin: 12px 10px 0;
-}
-.board-list thead th{
-  padding: 14px 18px;
-}
-.board-list th:first-child {
-  border-radius: 5px 0 0 5px;
-  width:20%;
-}
-.board-list th:last-child{
-  border-radius: 0 5px 5px 0;
-  width:80%;
-}
-table{
-  display: flex;
+    display:flex; align-items:center; justify-content:space-between; 
+    padding: 10px 10px 0;
+  }
+  .bgm-btn, .bgm-tab{display: flex;gap: 5px;}
+  .bgm-btn button{
+    width: 38px;
+    height: 38px;
+    border: 1px solid #DDDDDD;
+    border-radius: 50%;
+  }
+  .bgm-tab button{
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 100%;
+    width: unset;
+    padding:12px 21px 10px;
+  }
+  .board-list thead{
+    background: #F6F6F6;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 100%;
+    color: rgba(34, 34, 34, 0.5);
+    opacity: 0.8;
+    width: 355px;
+    margin: 12px 10px 0;
+  }
+  .board-list thead th{
+    padding: 14px 18px;
+  }
+  .board-list th:first-child {
+    border-radius: 5px 0 0 5px;
+    width:20%;
+  }
+  .board-list th:last-child{
+    border-radius: 0 5px 5px 0;
+    width:80%;
+  }
+  table{
+    display: flex;
     flex-direction: column;
     gap: 14px;
+  }
+  .board-area .board-list td{
+    height: 40px;
+    border-bottom: 1px solid #f1f1f1;
+    color: #222;
+    font-size: 11px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .board-area .board-list td.align-left{
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 21px;
+    width: 100%;
+  }
+  .num{padding: 0px 34px 0 19px;}
+  .bgm-play-tit{
+    max-width: 240px;
+    @include ellipsis(1);
+  }
 }
-.board-area .board-list td{
-  height: 40px;
-  border-bottom: 1px solid #f1f1f1;
-  color: #222;
-  font-size: 11px;
-  font-weight: 400;
-  text-align: center;
-}
-.board-area .board-list td.align-left{
-  text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 21px;
-  width: 100%;
-}
-.num{padding: 0px 34px 0 19px;}
-.bgm-play-tit{
-  max-width: 240px;
-  @include ellipsis(1);
-}
-}
+
 .ClientListAll{
   .sec-btn-L-on02{
     padding: 16.5px;
   }
 }
-
 
 .StudyRanking{
   top: 20px;
@@ -2650,45 +2066,157 @@ table{
   border-radius: 20px;
   width: 365px;
   height: 330px;
-.ranking-img img{margin-top:-8px; border-radius: 50%;
-  border: 3px solid transparent;
-  border-radius: 50%;
-  background-image: linear-gradient(#fff, #fff), linear-gradient(269.81deg, #A371FF 0%, #1593FC 51.58%, #5FC1FF 97.22%);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-}
-.ranking-img.r-01 img{width:80px; min-width: 80px; height:80px;}
-.ranking-img.r-02 img, .ranking-img.r-03 img{width:70px; min-width: 70px; height:70px;}
-  .realTimeStudy-layer, .memo-layer{position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 100; display: flex; justify-content:center; background-color: rgba(0, 0, 0, .2);}
-  .realTimeStudy-layer-box, .memo-layer-box{position:absolute; top:20px; width:375px; height:330px; background:#fff; border-radius:20px;}
-  .realTimeStudy-container{padding:10px 10px 20px; height:285px; overflow-y:auto; }
-  .realTimeStudy-container .realTimeStudy-tab{display:flex; gap:4px;}
-  .realTimeStudy-container .realTimeStudy-tab button{display:block; padding:6px 12px; background:#fff; border-radius:4px; color:#222; border:1px solid #ddd; font-size:13px; font-weight:400;}
-  .realTimeStudy-container .realTimeStudy-tab button.on{background:#8265F6; border-color:transparent; color:#fff; font-size:13px; font-weight:600;}
-  .realTimeStudy-container .realTimeStudy-container-box{padding-top:40px;}
-  .realTimeStudy-container .realTimeStudy-ranking{display:flex; justify-content:space-between; padding: 0 33px; height:140px;}
-  .realTimeStudy-container .realTimeStudy-ranking .ranking-txt-name{display:block; font-size:15px; font-weight:500; color:#000; text-align:center; margin-bottom:3px;}
-  .realTimeStudy-container .realTimeStudy-ranking .ranking-txt-time{display:block; font-size:13px; font-weight:400; color:#707070; text-align:center;}
-.study-ranking .ranking-img{position:relative; display:flex; align-items:center;  width:70px; height:70px; border-radius:50%; border: 3px solid transparent; border-radius: 50%;
-      background-origin: border-box; background-clip: content-box, border-box; margin-bottom:25px;}
-.study-ranking .ranking-img.r-01::after{content:''; width:37px; height:36px; position:absolute; bottom:-25px; left:57%; 
-      transform: translateX(-50%); 
+  .ranking-img img{
+    margin-top:-8px; border-radius: 50%;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(269.81deg, #A371FF 0%, #1593FC 51.58%, #5FC1FF 97.22%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+  }
+  .ranking-img.r-01 img {
+    width: 80px;
+    min-width: 80px;
+    height: 80px;
+  }
+  .ranking-img.r-02 img,
+  .ranking-img.r-03 img {
+    width: 70px;
+    min-width: 70px;
+    height: 70px;
+  }
+  .realTimeStudy-layer,
+  .memo-layer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .2);
+  }
+  .realTimeStudy-layer-box,
+  .memo-layer-box {
+    position: absolute;
+    top: 20px;
+    width: 375px;
+    height: 330px;
+    background: #fff;
+    border-radius: 20px;
+  }
+  .realTimeStudy-container {
+    padding: 10px 10px 20px;
+    height: 285px;
+    overflow-y: auto;
+  }
+  .realTimeStudy-container .realTimeStudy-tab {
+    display: flex;
+    gap: 4px;
+  }
+  .realTimeStudy-container .realTimeStudy-tab button {
+    display: block;
+    padding: 6px 12px;
+    background: #fff;
+    border-radius: 4px;
+    color: #222;
+    border: 1px solid #ddd;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .realTimeStudy-container .realTimeStudy-tab button.on {
+    background: #8265F6;
+    border-color: transparent;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .realTimeStudy-container .realTimeStudy-container-box {
+    padding-top: 40px;
+  }
+  .realTimeStudy-container .realTimeStudy-ranking {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 33px;
+    height: 140px;
+  }
+  .realTimeStudy-container .realTimeStudy-ranking .ranking-txt-name {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+    margin-bottom: 3px;
+  }
+  .realTimeStudy-container .realTimeStudy-ranking .ranking-txt-time {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #707070;
+    text-align: center;
+  }
+  .study-ranking .ranking-img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    margin-bottom: 25px;
+  }
+  .study-ranking .ranking-img.r-01::after {
+    content: '';
+    width: 37px;
+    height: 36px;
+    position: absolute;
+    bottom: -25px;
+    left: 57%;
+    transform: translateX(-50%);
     @include bg('ranking01');
-    }
-.study-ranking .ranking-img.r-02::after{content:''; width:37px; height:36px; position:absolute; bottom:-25px; left:57%; 
-      transform: translateX(-50%); 
-     @include bg('ranking02');
-    }
-.study-ranking .ranking-img.r-03::after{content:''; width:37px; height:36px; position:absolute; bottom:-25px; left:57%; 
-      transform: translateX(-50%); 
-     @include bg('ranking03');
-    }
-  .realTimeStudy-container .board-area{margin-top:10px;padding: 0 10px;}
-  .board-area .board-list td {position: relative;height: 40px; border-bottom: 1px solid #f1f1f1; color: #222; font-size: 11px; font-weight: 400; text-align: center;}
+  }
+  .study-ranking .ranking-img.r-02::after {
+    content: '';
+    width: 37px;
+    height: 36px;
+    position: absolute;
+    bottom: -25px;
+    left: 57%;
+    transform: translateX(-50%);
+    @include bg('ranking02');
+  }
+  .study-ranking .ranking-img.r-03::after {
+    content: '';
+    width: 37px;
+    height: 36px;
+    position: absolute;
+    bottom: -25px;
+    left: 57%;
+    transform: translateX(-50%);
+    @include bg('ranking03');
+  }
+  .realTimeStudy-container .board-area {
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+  .board-area .board-list td {
+    position: relative;
+    height: 40px;
+    border-bottom: 1px solid #f1f1f1;
+    color: #222;
+    font-size: 11px;
+    font-weight: 400;
+    text-align: center;
+  }
   .board-area .board-list td.align-left {
     text-align: left;
+  }
 }
-}
+
 .Memo{
   top: 20px;
   background: #fff;
@@ -2714,6 +2242,7 @@ table{
     }
   }
 }
+
 .CamView{
   .popCon{
     max-height: 776px;
@@ -2765,11 +2294,13 @@ table{
   .cam-profile > span{font-size:12px; font-weight:400; color:#fff; text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.7);}
   .camView > .cam-screen, .camView > .no-camera-box{height:186px; border: 1px solid #EEEEEE; border-radius: 20px; overflow:hidden;}
 }
+
 .ClientListAll, .HostPass{
   button[class*="-L"]{
     padding: 17px;
   }
 }
+
 .Connect{
   width: 335px;
   height: 597px;
@@ -2795,90 +2326,93 @@ table{
 }
 
 // 공통
-  .inp-wrap{
-    position: relative;
-    @include flexCol02(10px);
-    .inp-tit{
-      text-align: left;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 100%;
-      color: #333333;
-    }
-    input{
-      border-radius: 8px;
-      color: #0F182A;
-      background: #fff;
-      border: 1px solid #E6E8F1;
-      padding: 17px 20px 16px;
-      width: 100%;
-    }
-    input:focus{
-      color: #0F182A;
-      background: #F9FAFF;
-      border: 1px solid #8265F6;
-      caret-color: #8265F6;
-    }
-    input::placeholder{
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 100%;
-      color: rgba(0, 0, 0, 0.15);
-    }
-    .inp-btn{
-      // width: 24%;      
-      min-width: 52px;
-      height: 52px;
-      padding: 9px;
-      background: #0F182A;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 13px;
-      line-height: 130%;
-      text-align: center;
-      color: #FFFFFF;
-      opacity: 0.9;
-      flex-shrink: 0;
-    }
-  }
-  .inp-con.ctr{
-    @include flexCtr(8px);
-  }
-  .mem-btns{
-    @include flexCtr(7px);
-    .mem-btn{
-      width: 100%;
-      padding: 17px 0 16px;
-      border: 1px solid #E6E8F1;
-      border-radius: 8px;
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 100%;
-      color: #555555;
-    }
-    .mem-btn.on{
-      background: rgba(130, 101, 246, 0.2);
-      border: 1px solid #8265F6;
-      font-weight: 600;
-      font-size: 15px;
-      line-height: 100%;
-      color: #8265F6;
-    }
-  }
-  .er{
-    @include flexArCtr(2px);
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 100%;
-    letter-spacing: -0.01em;
-    color: #F52C1D;
+.inp-wrap{
+  position: relative;
+  @include flexCol02(10px);
+  .inp-tit{
     text-align: left;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: #333333;
   }
-  // 캠퍼스 바로가기
-  .CampusGoing{
-    @include BtLtCon(160px, 50%, 6);transform: translateX(-50%); 
+  input{
+    border-radius: 8px;
+    color: #0F182A;
+    background: #fff;
+    border: 1px solid #E6E8F1;
+    padding: 17px 20px 16px;
+    width: 100%;
   }
+  input:focus{
+    color: #0F182A;
+    background: #F9FAFF;
+    border: 1px solid #8265F6;
+    caret-color: #8265F6;
+  }
+  input::placeholder{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    color: rgba(0, 0, 0, 0.15);
+  }
+  .inp-btn{
+    // width: 24%;      
+    min-width: 52px;
+    height: 52px;
+    padding: 9px;
+    background: #0F182A;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 130%;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 0.9;
+    flex-shrink: 0;
+  }
+}
 
+.inp-con.ctr{
+  @include flexCtr(8px);
+}
+
+.mem-btns{
+  @include flexCtr(7px);
+  .mem-btn{
+    width: 100%;
+    padding: 17px 0 16px;
+    border: 1px solid #E6E8F1;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    color: #555555;
+  }
+  .mem-btn.on{
+    background: rgba(130, 101, 246, 0.2);
+    border: 1px solid #8265F6;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 100%;
+    color: #8265F6;
+  }
+}
+
+.er{
+  @include flexArCtr(2px);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  color: #F52C1D;
+  text-align: left;
+}
+
+// 캠퍼스 바로가기
+.CampusGoing{
+  @include BtLtCon(160px, 50%, 6);transform: translateX(-50%); 
+}
 
 // 마이룸 옷장
 .Closet{
@@ -3006,6 +2540,7 @@ table{
     transform: translateX(-50%);
   }
 }
+
 // 학생인증
 .StudentCertified{
   width: 335px;
@@ -3055,6 +2590,7 @@ table{
     }
   }
 }
+
 // 학생/교직원인증
 .StudentCertified.ty02{
   height: auto;
@@ -3435,15 +2971,15 @@ table{
   width: 340px;
   height: 86px;
   margin: 0 auto 23px;
-padding: 20px;
-border: 1px solid #E2E2E2;
-border-radius: 20px;
-text-align: left;
-input{
-  border: 0;
-  padding-top: 13px;
-  width: 300px;
-}
+  padding: 20px;
+  border: 1px solid #E2E2E2;
+  border-radius: 20px;
+  text-align: left;
+  input{
+    border: 0;
+    padding-top: 13px;
+    width: 300px;
+  }
 }
 
 // 스터디 윗 미 주변 유저 목록 (일반 유저)
@@ -3466,8 +3002,6 @@ input{
     font-size: 12px;
     line-height: 140%;
     color: #333;
-
-    .guide_img {}
 
     .guide_msg {
       position: relative;
@@ -3563,45 +3097,71 @@ input{
 //********* portrait 세로 모바일
 @media all and (orientation: portrait) {
 
+  // 메인 전체 팝업창
+  @mixin CenterCon() {
+    @include LtCon(0, 0, 10);
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    background: #FFFFFF;
+    border-radius: 0;
+  }
+
   // 우측 하단 팝업창
-  @mixin popBtRt(){overflow: hidden;@include BtLtCon(0, 50%, 10);width: 375px;height: auto;max-height: 860px;color: #707070;background:#fff;border-radius: 20px 20px 0 0; transform: translateX(-50%);}
+  @mixin popBtRt() {
+    overflow: hidden;
+    @include BtLtCon(0, 50%, 10);
+    width: 375px;
+    height: auto;
+    max-height: 860px;
+    color: #707070;
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+    transform: translateX(-50%);
+  }
+
+  @mixin MsgCon() {
+    width: 335px;
+    height: 143px;
+  }
+
   .BtRtPop{@include popBtRt();}
   
-   // 공통영역
-    html {
-      background:  url($res_root + '/resources/img/bg_mo.jpg') center no-repeat;
-    }
+  // 공통영역
+  html {
+    background:  url($res_root + '/resources/img/bg_mo.jpg') center no-repeat;
+  }
   
-    .menuclose{@include close(20px, 24px, 1);}
-    .mapclose{@include close(0, -20px, 10);width: 50px;height: 50px;background: #fff;}
-    .subclose{@include close(21px, 20px, 1);}
-    .entireclose{@include close(61px, 24px, 2);}
+  .menuclose{@include close(20px, 24px, 1);}
+  .mapclose{@include close(0, -20px, 10);width: 50px;height: 50px;background: #fff;}
+  .subclose{@include close(21px, 20px, 1);}
+  .entireclose{@include close(61px, 24px, 2);}
   
-    // 메시지 숫자 표기
-    .-No{@include LtCon(-3px, 12px, 0);}
-    // 팝업창 타이틀
-    // css 확인필요
-    // .popTit{@include flexCtr(0);width: 100%;padding: 20px 0;font-size: 17px;}  
-    .popTit{@include flexCtr(0);width: 100%;padding: 20px 0;font-size: 24px;}  
-    .subTit{
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 100%;
-      color: #000;
-      padding: 21px 0 18px;text-align: center
-    }
-    // 알수없는 버튼 모음 박스
-    .UnKnowBtn{
-      width: 60%;
-      height: 500px;
-    }
+  // 메시지 숫자 표기
+  .-No{@include LtCon(-3px, 12px, 0);}
+
+  // 팝업창 타이틀
+  // css 확인필요
+  // .popTit{@include flexCtr(0);width: 100%;padding: 20px 0;font-size: 17px;}  
+  .popTit{@include flexCtr(0);width: 100%;padding: 20px 0;font-size: 24px;}  
+  .subTit{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color: #000;
+    padding: 21px 0 18px;text-align: center
+  }
+  // 알수없는 버튼 모음 박스
+  .UnKnowBtn{
+    width: 60%;
+    height: 500px;
+  }
   
     // 모바일 팝업 상단/하단 바
     .popMoBar {@include LtCon(9px, 50%, 1); width: 80px; height: 6px; border-radius: 5px; background: #ddd; transform: translateX(-50%); }
     .popMoBar.bt {@include BtLtCon(8px, 50%, 1); top: auto; width: 134px; height: 5px; border-radius: 5px; background: #ddd; transform: translateX(-50%); }
-  
-    // 우측 하단 팝업창
-    @mixin popBtRt(){@include BtLtCon(0, 50%, 10);width: 375px; transform: translateX(-50%);}
   
     // css 확인필요
     // @mixin popBtRt(){@include BtRtCon(0, 50%, 10);transform: translateX(50%);width: 100%;}
@@ -3775,12 +3335,8 @@ input{
           width: 100%; height: 1px; background: #EEEEEE; border-radius: 6px;
         }
       }
-    }
-  
-    @mixin MsgCon(){
-      width: 335px;
-      height: 143px;
-    }
+    }  
+    
     .MsgCon{
       @include MsgCon();
       .sec-btns{
@@ -5689,22 +5245,82 @@ input{
 //********** landscape 가로 모바일
 @media all and (orientation: landscape) {
 
+  // 메인 전체 팝업창
+  @mixin CenterCon() {
+    @include LtCon(0, 0, 10);
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    background: #FFFFFF;
+    border-radius: 0;
+  }
+
+  // 메인 중앙 팝업창
+  @mixin CenterCon2() {
+    @include LtCon(50%, 50%, 10);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-height: 100svh;
+    overflow: hidden;
+    background: #FFFFFF;
+    border-radius: 0;
+  }
+
   // 우측 하단 팝업창
-  @mixin popBtRt(){overflow: hidden;@include BtRtCon(0, 84px, 10);width: 375px;height: auto;max-height: 860px;color: #707070;background:#fff;border-radius: 20px 20px 0 0;}
+  @mixin popBtRt() {
+    overflow: hidden;
+    @include BtRtCon(0, 84px, 10);
+    width: 375px;
+    height: auto;
+    max-height: 860px;
+    color: #707070;
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+  }
+
+  // 우측 중앙 팝업창
+  @mixin popBtRt() {
+    @include BtLtCon(0, 50%, 10);
+    width: 375px;
+    transform: translateX(-50%);
+  }
+
+  // 우측 중앙 팝업창
+  @mixin popCenter() {
+    @include RtCon(0, 0, 10);
+    transform: translateY(0);
+    border-radius: 0;
+    width: 462px;
+    max-height: 100%;
+  }
+
+  // 우측 하단 팝업창
+  @mixin popBtRt() {
+    @include BtRtCon(0, 50px, 10);
+    width: 391px;
+  }
+
+  @mixin MsgCon() {
+    width: 465px;
+    height: 143px;
+  }
+
   .BtRtPop{@include popBtRt();}
   
   // 공통영역
-    html {
-      background:  url($res_root + '/resources/img/bg_mo2.jpg') center no-repeat;
-    }
+  html {
+    background:  url($res_root + '/resources/img/bg_mo2.jpg') center no-repeat;
+  }
   
-    .menuclose{@include close(20px, 24px, 1);}
-    .mapclose{@include close(0, -20px, 10);width: 50px;height: 50px;background: #fff;}
-    .subclose{@include close(21px, 20px, 1);}
-    .entireclose{@include close(20px, 24px, 2);}
+  .menuclose{@include close(20px, 24px, 1);}
+  .mapclose{@include close(0, -20px, 10);width: 50px;height: 50px;background: #fff;}
+  .subclose{@include close(21px, 20px, 1);}
+  .entireclose{@include close(20px, 24px, 2);}
   
-    // 메시지 숫자 표기
-    .-No{@include LtCon(-3px, 12px, 0);}
+  // 메시지 숫자 표기
+  .-No{@include LtCon(-3px, 12px, 0);}
   
     // 팝업창 타이틀
     .popTit{padding: 20px 0;font-size: 24px;}
@@ -5728,10 +5344,7 @@ input{
     .CtPop{@include CenterCon();}
     .Invite, .Connect, .StudentCertified {@include CenterCon2();}  
     .ConsProduce, .ConsEntrance, .NpcInstlReg, .Npc-instl, .Npc-guide, .Announcement, .MyProfile, .MyFriend, .Follow, .Message, .MessageInner, .MyActivity, .MySetting{@include CenterCon();}
-  
-    // 우측 중앙 팝업창
-    @mixin popBtRt(){@include BtLtCon(0, 50%, 10);width: 375px;transform: translateX(-50%);}
-  
+
     // 알수없는 버튼 모음 박스
     .UnKnowBtn{
       height: 300px;
@@ -5750,14 +5363,8 @@ input{
     // 모바일 팝업 상/하단 바
     .popMoBar {@include LtCon(9px, 50%, 1); width: 80px; height: 6px; border-radius: 5px; background: #ddd; transform: translateX(-50%); }
     .popMoBar.bt {@include BtLtCon(8px, 50%, 1); top: auto; width: 134px; height: 5px; border-radius: 5px; background: #ddd; transform: translateX(-50%); }
-  
-    // 우측 중앙 팝업창
-    @mixin popCenter(){@include RtCon(0, 0, 10); transform: translateY(0); border-radius: 0; width: 462px; max-height: 100%;}
-    .popCenter, .Chat, .ProfileView, .Voters{@include popCenter();}
-  
-    // 우측 하단 팝업창
-    @mixin popBtRt(){@include BtRtCon(0, 50px, 10);width: 391px;}
-    .popCenter, .Chat, .Voters, .AroundAll{@include popCenter();}
+
+    .popCenter, .Chat, .ProfileView, .Voters, .AroundAll {@include popCenter();}
     .Around, .Emoji {@include popBtRt(); border-radius: 30px 30px 0 0;}
   
     // 메인 우측바
@@ -5854,10 +5461,6 @@ input{
       }
     }
   
-    @mixin MsgCon(){
-      width: 465px;
-      height: 143px;
-    }
     .MsgCon{
       @include MsgCon();
       .sec-btns{
@@ -7869,3 +7472,302 @@ input{
       max-height: calc(100svh - 75px);
     }
   }
+
+// 더본코리아
+
+// 맵 이벤트존 위치 아이콘
+.eventzoneLoc {
+  @include LtCon(423px, 935px, 1);
+}
+
+// npc guide
+.Tb-NpcMessage {
+  .con-wrap {
+    min-height: auto;
+    height: 147px;
+    max-height: 147px;
+    padding: 30px 150px 51px 34px;
+
+    .con-inner-col {
+      padding-right: 0;
+    }
+  }
+
+  .sec-btn {
+    @include BtRtCon(21px, 15px, 1);
+    width: 122px;
+  }
+}
+
+//메시지 팝업
+.Tb-MessageInner {
+  .ChatCon .Chat01 .ChatAlert .ChatTxt {
+    border-radius: 0 0 12px 12px;
+
+    &::before {
+      @include bg('chatBalloon03');
+    }
+  }
+
+  .ChatAlertTxt {
+    @include flexArCtr(0);
+    width: 100%;
+    height: 25px;
+    padding: 6px 20px;
+    border-radius: 0 12px 0 0;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 100%;
+    color: #FFFFFF;
+    background: #8265F6;
+  }
+}
+
+// 퀘스트 아이콘
+.Quest-icon {
+  position: relative;
+
+  .Npc-alert {
+    @include LtCon(314px, 1174px, 10);
+  }
+
+  .Event-view {
+    @include LtCon(403px, 541px, 10);
+  }
+
+  .Event-play {
+    @include LtCon(453px, 541px, 10);
+  }
+
+  .Event-balloon {
+    @include LtCon(409px, 734px, 10);
+    display: flex;
+    justify-content: center;
+    width: 189px;
+    height: 86px;
+    padding-top: 28px;
+    @include bg('tb-eventBalloon');
+
+    p {
+      text-align: center;
+    }
+  }
+}
+
+//********* portrait 세로 모바일
+@media all and (orientation: portrait) {
+  // 맵 이벤트존 위치 아이콘
+  .eventzoneLoc {
+    @include LtCon(479px, 268px, 1);
+  }
+
+  // npc guide
+  .Tb-NpcMessage {
+    .popTit {
+      font-size: 18px;
+      padding-bottom: 14px;
+    }
+
+    .con-wrap {
+      min-height: auto;
+      height: 137px;
+      max-height: 137px;
+      padding: 20px 0 20px 30px;
+
+      .con-inner-col {
+        padding-right: 24px;
+        max-height: 70px;
+      }      
+    }
+
+    .sec-btn {
+      @include BtRtCon(10px, 11px, 1);
+      width: 60px;
+      padding: 4px 15px;
+    }
+  }
+
+  //메시지 팝업
+  .Tb-MessageInner {
+    .msg-pfp {display: none;}
+    .con-wrap {
+      padding: 0; 
+      max-height: calc(100% - 65px);
+    }    
+    .ChatCon .Chat01 .ChatAlert .ChatTxt {
+      border-radius: 0 0 12px 12px;
+      &::before {
+        @include bg('chatBalloon03');
+      }
+    }
+    .ChatAlertTxt {
+      height: 24px;
+      padding: 5px 15px;
+    }
+    .ChatMessage .MessageBox {
+      padding: 8px 13px 7px 12px;
+      button {
+        width: 32px;
+        height: 32px;
+        @include bg('Enteron32');
+        flex-shrink: 0;
+      }
+      button.EnterOn20 {
+        @include bg('Enteroff32');
+      }
+    }
+    .ChatCon .Chat-desc-time {
+      &::before {
+        top: 5px;
+        width: 34%;
+      }
+
+      &::after {
+        top: 5px;
+        width: 34%;        
+      }
+    }
+  }
+
+  // 퀘스트 아이콘
+  .Quest-icon {
+    position: relative;
+
+    .Npc-alert {
+      @include LtCon(181px, 177px, 10);
+    }
+
+    .Event-view {
+      @include LtCon(291px, 149px, 10);
+    }
+
+    .Event-play {
+      @include LtCon(341px, 149px, 10);
+    }
+
+    .Event-balloon {
+      @include LtCon(391px, 58px, 10);
+      display: flex;
+      justify-content: center;
+      width: 189px;
+      height: 86px;
+      padding-top: 28px;
+      @include bg('tb-eventBalloon');
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+  
+}
+
+//********** landscape 가로 모바일
+@media all and (orientation: landscape) {
+
+  // 맵 이벤트존 위치 아이콘
+  .eventzoneLoc {
+    @include LtCon(162px, 588px, 1);
+  }
+
+  // npc guide
+  .Tb-NpcMessage {
+    .popTit {
+      font-size: 18px;
+      padding-bottom: 14px;
+    }
+
+    .con-wrap {
+      min-height: auto;
+      height: 77px;
+      max-height: 77px;
+      padding: 10px 0 10px 98px;
+
+      .con-inner-col {
+        padding-right: 82px;
+        max-height: 45px;
+      }
+    }
+
+    .sec-btn {
+      @include BtRtCon(7px, 11px, 1);
+      width: 60px;
+      padding: 4px 15px;
+    }
+  }
+
+  //메시지 팝업
+  .Tb-MessageInner {
+    .msg-pfp {display: none;}
+    .con-wrap {
+      padding: 0;
+      max-height: calc(100% - 65px);
+    }
+
+    .ChatCon .Chat01 .ChatAlert .ChatTxt {
+      border-radius: 0 0 12px 12px;
+
+      &::before {
+        @include bg('chatBalloon03');
+      }
+    }
+
+    .ChatAlertTxt {
+      height: 24px;
+      padding: 5px 15px;
+    }
+
+    .ChatMessage .MessageBox {
+      height: 28px;
+      padding: 8px 5px 7px 12px;
+
+      button {
+        flex-shrink: 0;
+      }
+    }
+
+    .ChatCon .Chat-desc-time {
+      &::before {
+        top: 5px;
+        width: 43%;
+      }
+
+      &::after {
+        top: 5px;
+        width: 43%;
+      }
+    }
+  }
+
+  // 퀘스트 아이콘
+  .Quest-icon {
+    position: relative;
+
+    .Npc-alert {
+      @include LtCon(36px, 575px, 10);
+    }
+
+    .Event-view {
+      @include LtCon(150px, 339px, 10);
+    }
+
+    .Event-play {
+      @include LtCon(200px, 339px, 10);
+    }
+
+    .Event-balloon {
+      @include LtCon(250px, 339px, 10);
+      display: flex;
+      justify-content: center;
+      width: 189px;
+      height: 86px;
+      padding-top: 28px;
+      @include bg('tb-eventBalloon');
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+}
