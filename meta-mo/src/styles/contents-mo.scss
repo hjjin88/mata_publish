@@ -7551,7 +7551,7 @@ margin: 20px auto;
     width: 189px;
     height: 86px;
     padding-top: 28px;
-    @include bg('tb-eventBalloon');
+    @include bg('tb-eventBalloon', $format: "png");
 
     p {
       text-align: center;
@@ -7561,15 +7561,11 @@ margin: 20px auto;
 
 //********* portrait 세로 모바일
 @media all and (orientation: portrait) {
+
   // 맵 이벤트존 위치 아이콘
   .eventzoneLoc {
     @include LtCon(479px, 268px, 1);
   }
-// 모바일 이동 버튼
-.moving-pad {
-  &.left {left: 20px;}
-  &.right {right: 20px;}
-}
 
   // npc guide
   .Tb-NpcMessage {
@@ -7580,14 +7576,14 @@ margin: 20px auto;
 
     .con-wrap {
       min-height: auto;
-      height: 137px;
-      max-height: 137px;
-      padding: 20px 0 20px 30px;
+      height: 107px;
+      max-height: 107px;
+      padding: 20px 49px 20px 30px;
 
       .con-inner-col {
-        padding-right: 24px;
-        max-height: 70px;
-      }      
+        max-height: none;
+        overflow: hidden;
+      }
     }
 
     .sec-btn {
@@ -7599,33 +7595,43 @@ margin: 20px auto;
 
   //메시지 팝업
   .Tb-MessageInner {
-    .msg-pfp {display: none;}
+    .msg-pfp {
+      display: none;
+    }
+
     .con-wrap {
-      padding: 0; 
+      padding: 0;
       max-height: calc(100% - 65px);
-    }    
+    }
+
     .ChatCon .Chat01 .ChatAlert .ChatTxt {
       border-radius: 0 0 12px 12px;
+
       &::before {
         @include bg('chatBalloon03');
       }
     }
+
     .ChatAlertTxt {
       height: 24px;
       padding: 5px 15px;
     }
+
     .ChatMessage .MessageBox {
       padding: 8px 13px 7px 12px;
+
       button {
         width: 32px;
         height: 32px;
         @include bg('Enteron32');
         flex-shrink: 0;
       }
+
       button.EnterOn20 {
         @include bg('Enteroff32');
       }
     }
+
     .ChatCon .Chat-desc-time {
       &::before {
         top: 5px;
@@ -7634,7 +7640,7 @@ margin: 20px auto;
 
       &::after {
         top: 5px;
-        width: 34%;        
+        width: 34%;
       }
     }
   }
@@ -7657,19 +7663,9 @@ margin: 20px auto;
 
     .Event-balloon {
       @include LtCon(391px, 58px, 10);
-      display: flex;
-      justify-content: center;
-      width: 189px;
-      height: 86px;
-      padding-top: 28px;
-      @include bg('tb-eventBalloon');
-
-      p {
-        text-align: center;
-      }
     }
   }
-  
+
 }
 
 //********** landscape 가로 모바일
@@ -7691,11 +7687,11 @@ margin: 20px auto;
       min-height: auto;
       height: 77px;
       max-height: 77px;
-      padding: 10px 0 10px 98px;
+      padding: 10px 93px 10px 98px;
 
       .con-inner-col {
-        padding-right: 82px;
-        max-height: 45px;
+        max-height: none;
+        overflow: hidden;
       }
     }
 
@@ -7708,7 +7704,10 @@ margin: 20px auto;
 
   //메시지 팝업
   .Tb-MessageInner {
-    .msg-pfp {display: none;}
+    .msg-pfp {
+      display: none;
+    }
+
     .con-wrap {
       padding: 0;
       max-height: calc(100% - 65px);
@@ -7767,16 +7766,6 @@ margin: 20px auto;
 
     .Event-balloon {
       @include LtCon(250px, 339px, 10);
-      display: flex;
-      justify-content: center;
-      width: 189px;
-      height: 86px;
-      padding-top: 28px;
-      @include bg('tb-eventBalloon');
-
-      p {
-        text-align: center;
-      }
     }
   }
 
