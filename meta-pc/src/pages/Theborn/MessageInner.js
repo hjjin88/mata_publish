@@ -8,14 +8,14 @@ const EventMessage = ({setPopName, selectedGnbIndex }) => {
     return (
         <>
         <div className="MessageInner Tb-MessageInner">
-            <img className="msg-pfp" src="/resources/img/bg.png" alt="프로필 사진 이미지" />
+            <img className="msg-pfp" src="/resources/img/tb_profileimg30.svg" alt="프로필 사진 이미지" />
             <button type="button" className="subclose close16" onClick={ e => { setPopName(); }} />
             <div className="popTit">메시지</div>
             <div className="con-wrap">
                 <div className="con-inner-col">
                     <div className="ChatCon">
                         <div className="ChatInner Chat01">
-                            <img className="ChatImg" src="/resources/img/bg.png" alt="프로필 사진 이미지" />
+                            <img className="ChatImg" src="/resources/img/tb_profileimg30.svg" alt="프로필 사진 이미지" />
                             <div className="ChatProfile">
                                 <div className="ChatBox ChatAlertBox">
                                     <div className="ChatAlert">
@@ -31,7 +31,7 @@ const EventMessage = ({setPopName, selectedGnbIndex }) => {
                             </div>
                         </div>
                         <div className="ChatInner Chat01">
-                            <img className="ChatImg" src="/resources/img/bg.png" alt="프로필 사진 이미지" />
+                            <img className="ChatImg" src="/resources/img/tb_profileimg30.svg" alt="프로필 사진 이미지" />
                             <div className="ChatProfile">
                                 <div className="ChatBox ChatAlertBox">
                                     <div className="ChatAlert">
@@ -47,7 +47,7 @@ const EventMessage = ({setPopName, selectedGnbIndex }) => {
                         </div>
                         <div className="Chat-desc-time">2023년 12월 26일</div>
                         <div className="ChatInner Chat01">
-                            <img className="ChatImg" src="/resources/img/bg.png" alt="프로필 사진 이미지" />
+                            <img className="ChatImg" src="/resources/img/tb_profileimg30.svg" alt="프로필 사진 이미지" />
                             <div className="ChatProfile">
                                 <div className="ChatBox ChatAlertBox">
                                     <div className="ChatAlert">
@@ -63,7 +63,7 @@ const EventMessage = ({setPopName, selectedGnbIndex }) => {
                             </div>
                         </div>
                         <div className="ChatInner Chat01">
-                            <img className="ChatImg" src="/resources/img/bg.png" alt="프로필 사진 이미지" />
+                            <img className="ChatImg" src="/resources/img/tb_profileimg30.svg" alt="프로필 사진 이미지" />
                             <div className="ChatProfile">
                                 <div className="ChatBox ChatAlertBox">
                                     <div className="ChatAlert">
