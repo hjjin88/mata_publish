@@ -19,20 +19,20 @@ const Stamp = ({setPopName }) => {
                 </div>
                 <div className="Stamp-con-right">
                     <ul className="Stamp-con-right-list">
-                        <li><img src="/resources/img/stamp.svg" alt="빽다방 스탬프 이미지" /></li>
-                        <li><img src="/resources/img/stamp_coffee.svg" alt="빽다방 스탬프 이미지" /></li>
+                        <li><img src="/resources/img/stamp_on.svg" alt="빽다방 스탬프 이미지" /></li>
+                        <li><img src="/resources/img/stamp_off.svg" alt="빽다방 스탬프 이미지" /></li>
+                        <li><img src="/resources/img/stamp_coffee_on.svg" alt="빽다방 스탬프 이미지" /></li>
+                        <li><img src="/resources/img/stamp_coffee_off.svg" alt="빽다방 스탬프 이미지" /></li>
                         <li><img src="/resources/img/stamp_box_off.svg" alt="빽다방 스탬프 이미지" /></li>
                         <li><img src="/resources/img/stamp_box_on.svg" alt="빽다방 스탬프 이미지" /></li>
-                        <li><img src="/resources/img/stamp.svg" alt="빽다방 스탬프 이미지" /></li>
-                        <li><img src="/resources/img/stamp.svg" alt="빽다방 스탬프 이미지" /></li>
-                        <li><img src="/resources/img/stamp.svg" alt="빽다방 스탬프 이미지" /></li>
-                        <li><img src="/resources/img/stamp.svg" alt="빽다방 스탬프 이미지" /></li>
-                        <li><img src="/resources/img/stamp.svg" alt="빽다방 스탬프 이미지" /></li>
-                        <li><img src="/resources/img/stamp.svg" alt="빽다방 스탬프 이미지" /></li>
+                        <li><img src="/resources/img/stamp_final_box_on.svg" alt="빽다방 스탬프 이미지" /></li>
+                        <li><img src="/resources/img/stamp_final_box_off.svg" alt="빽다방 스탬프 이미지" /></li>
+                        <li><img src="/resources/img/stamp_on.svg" alt="빽다방 스탬프 이미지" /></li>
+                        <li><img src="/resources/img/stamp_on.svg" alt="빽다방 스탬프 이미지" /></li>
                     </ul>
                     <ul className="Stamp-con-right-desc">
-                        <li>스터디 1시간 진행 시 기간 내 10번 스탬프 발급(1일 1회 한정)</li>
-                        <li>10번 스탬프를 모두 모으면 추첨을 통해 더본코리아 상품권 지급</li>
+                        <li>&nbsp;&nbsp;스터디 1시간 진행 시 기간 내 10번 스탬프 발급(1일 1회 한정)</li>
+                        <li>&nbsp;&nbsp;10번 스탬프를 모두 모으면 추첨을 통해 더본코리아 상품권 지급</li>
                     </ul>
                 </div>
             </div>

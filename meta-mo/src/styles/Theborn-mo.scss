@@ -7,36 +7,39 @@ html {
 
 // 퀘스트 창
 .Quest{
-    @include LtCon(40%, 0, 5);
+    @include LtCon(24%, 0, 5);
     transform: translateY(-50%);
     dl{
+        font-weight: 600;
+        font-size: 13px;
+        color: #fff;
         .mission{
             position: relative;
             @include flexArCtr(0);
-            @include bg('tb_quest_bg');
-            height: 40px;
-            width: 300px;
-            padding-left: 41px;
+            @include bg('tb_quest_bg_mo');
+            height: 27px;
+            width: 202.5px;
+            padding-left: 42px;
             &::before{
                 content: '';
-                @include bg('mission');
+                @include bg('mission_mo');
                 position: absolute;
-                top: 8px;
-                left: 9px;
-                width: 25px;
-                height: 25px;
+                top: 6px;
+                left: 20px;
+                width: 16px;
+                height: 16px;
             }
         }
         .mission.clear{
             &::before{
-                @include bg('mission_clear');
+                @include bg('mission_clear_mo');
             }
         }
         dd{
             @include flexArCtr(0);
-            height: 40px;
-            width: 300px;
-            padding-left: 41px;
+            height: 27px;
+            width: 202.5px;
+            padding-left: 42px;
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
         }
         
@@ -45,64 +48,72 @@ html {
 .Stamp{
     @include LtCon(50%, 50%, 11);
     transform: translate(-50%, -50%); 
-    @include bg('stamp_bg');
-    width: 1189px;
-height: 549px;
-.subclose-out{
-    top: 50px;
-}
+    background: #fff;
+    width: 100%;
+    height: 100svh;
+    .subTit{
+        border-bottom: 1px solid #eee;
+    }
 &-con{
     display: flex;
     gap: 0;
-    height: 549px;
+    height: 100svh;
     &-left{
-        width: 386.43px;
-        @include flexCol(12px);
+        padding: 96px 41px;
+        @include flexCol04(11px);
         flex-shrink: 0;
+        background: #FFE800;
         .tit{
             font-weight: 700;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 100%;
             color: #CB9200;
         }
         .time{
             font-weight: 700;
-            font-size: 64px;
+            font-size: 48px;
             line-height: 100%;
             color: #001F60;
         }
         .txt{
             font-weight: 500;
-            font-size: 14px;
+            font-size: 13px;
             line-height: 100%;
             color: #CB9200;
         }
+        .loading_bar{
+            width: 179px;
+            height: 9.95px;
+        }
     }
     &-right{
-        @include flexCol03(102px);
-        padding: 87px 52px 39px 52px;
+        @include flexCol04(18px);
+        padding: 30.29px 0;
+        border-left: 3.05826px dashed #FEC600;
         &-list{
             display: flex;
             flex-wrap: wrap;
-            height: 283px;
-            gap: 29px 18px;
+            gap: 11.44px 4.72px;
+            width: 100%;
+            padding: 0 44px 18.56px;
+            border-bottom: 1px solid #eee;
             li{
                 @include flexCtr(0);
-                width: 125px;
+                width: 88px;
             }
         }
         &-desc{
             width: fit-content;
             margin: 0 auto;
             li{
-                padding-bottom: 8px;
+                padding-bottom: 11px;
                 font-weight: 400;
-                font-size: 15px;
+                font-size: 13px;
                 line-height: 100%;
                 text-align: left;
                 color: #787878;
                 &::before{
-                    content: '· '
+                    content: '·'
                 }
             }
         }
@@ -114,19 +125,20 @@ height: 549px;
     transform: translate(-50%, -50%);
     text-align: center;
     background: #fff;
-    border-radius: 10px;
     color: #222;
     &-ty01{
         width: 335px;
         padding: 30px 0 22px;
+        border-radius: 10px;
+
     }
     &-ty02{
-        width: 600px;
-        height: 400px;
+        width: 335px;
+        border-radius: 10px;
     }
     &-ty03{
-        width: 600px;
-        height: 900px;
+        width: 100vw;
+        height: 100svh;
     }
     &-tit{
         font-weight: 700;
@@ -137,14 +149,14 @@ height: 549px;
         }
         &-02{
             @extend .Pop-tit;
-            padding: 15px;
+            padding: 10px;
             border-bottom: 1px solid #eee;
         }
     }
     &-txt{
         font-weight: 400;
-        font-size: 15px;
-        line-height: 22px;
+        font-size: 12px;
+        line-height: 18px;
         color: #555;
     }
     &-btn {
@@ -161,13 +173,15 @@ height: 549px;
         }
         &-02{
             @extend .Pop-btn;
-            width: 335px;
-            height: 55px;
+            height: 32px;
+            width: 187px;
             font-weight: 400;
-            font-size: 20px;
-            margin-top: 21px;
+            font-size: 15px;
+            margin: 11px auto 17px;
             &-red{
                 @extend .Pop-btn-02;
+                width: 335px;
+                height: 55px;
                 background: #E42122;
             }
         }
@@ -175,7 +189,7 @@ height: 549px;
     &-img{
         position: relative;
         margin: 0 auto;
-        padding: 16px 0 3px;
+        padding: 5px 0 3px;
         &-inner{
             position: absolute;
             top: 50%;
@@ -184,13 +198,13 @@ height: 549px;
         }
         &-txt{
             font-weight: 700;
-            font-size: 14px;
+            font-size: 10px;
             color: #fff;
             &-01{
                 @extend .Pop-img-txt;
                 @include LtCon(50%,50%,0);
                 transform: translate(-50%, -50%);
-                margin-top: 7px;
+                margin-top: 3px;
             }
             &-02{
                 @extend .Pop-img-txt;
@@ -199,33 +213,37 @@ height: 549px;
             }
         }
     }
-    .hspc_kiosk_banner img{width: 100%;}
+    .hspc_kiosk_banner img{display: none;}
+    .kiosk-con{}
     .kiosk{
-        height: 67.7svh;
-        background: #FEB700;
         border-radius: 0 0 10px 10px;
         .kiosk-tit{
             width: 100%;
-            padding: 16.17px 20px 15.5px;
-            background: #FEB700;
+            padding: 5px 36.18px;
             text-align: left;
             font-weight: 700;
             font-size: 18px;
             color: #fff;
+            background: #FEB700;
         }
         .kiosk-list{
-            @include flexArCtr(8.33px 6.87px);
+            @include flexArCtr(21px 4.4px);
             flex-wrap: wrap;
-            width: 100%;
-            padding: 22.5px 10px 0;
+            width: 50%;
+            padding: 22.5px 10px;
             background: #fff;
+            height: calc(100svh - 94px);
+            overflow-y: scroll;
+            overflow-x: hidden;
             &-item{
-                width: 32.5%;
                 @include flexCol(0);
                 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                img{
+                    width: 118.74px;
+                }
                 p{
                     @include flexCtr(0);
-                    width: 188.84px;
+                        width: 118.74px;
                     height: 71.67px;
                     background: #E42122;
                     font-weight: 700;
@@ -233,14 +251,52 @@ height: 549px;
                     color: #fff;
                 }
             }
-            .center{
-                margin: 0 auto;
-                .Pop-btn-02-red{
-                    margin-top: 64px;
-                    margin-bottom: 22.5px;
-                }
+        }
+        .center{
+            width: 50%;
+            margin: 0 auto;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            @include flexCol(0);            
+            .Pop-btn-02-red{
+                margin-bottom: 16.5px;
             }
+        }
+        .bar{
+            width: 100%;
+            height: 31px;
+            background: #FEB700;
         }
     }
 }
 
+//********* portrait 세로 모바일
+@media all and (orientation: portrait) {
+    .Pop .kiosk .kiosk-list{
+        width: 100%;
+        padding: 34px 10px;
+        height: auto;
+    }
+    .Pop .kiosk .kiosk-list-item img,
+    .Pop .kiosk .kiosk-list-item p{
+        width: 114px;
+    }
+    .Pop .hspc_kiosk_banner img{display: block;width: 100%;height: 60px;}
+    .Pop .kiosk .center{
+        width: auto;
+        position: unset;
+    }
+    .Pop .kiosk .center .Pop-btn-02-red{
+        margin: 75px auto 36.5px;
+    }
+    .Stamp-con{
+        display: block; 
+        &-left{
+            padding: 43px 41px;
+        }
+        &-right{
+            border-left:0;
+        }
+    }
+}

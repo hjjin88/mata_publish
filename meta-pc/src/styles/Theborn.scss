@@ -165,7 +165,7 @@ height: 549px;
             height: 55px;
             font-weight: 400;
             font-size: 20px;
-            margin-top: 21px;
+            margin: 21px auto 29px;
             &-red{
                 @extend .Pop-btn-02;
                 background: #E42122;
@@ -201,13 +201,12 @@ height: 549px;
     }
     .hspc_kiosk_banner img{width: 100%;}
     .kiosk{
-        height: 67.7svh;
+        height: 71.8svh;
         background: #FEB700;
         border-radius: 0 0 10px 10px;
         .kiosk-tit{
             width: 100%;
             padding: 16.17px 20px 15.5px;
-            background: #FEB700;
             text-align: left;
             font-weight: 700;
             font-size: 18px;
