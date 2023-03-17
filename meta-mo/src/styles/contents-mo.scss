@@ -1825,7 +1825,7 @@
   .thumblist {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
     width: 648px;
     flex-wrap: wrap;
   }
@@ -1981,10 +1981,18 @@
 }
 
 .BGM{
+  background: #fff;
+  z-index: 11;
+  position: relative;
+  height: 100svh;
+  color: #222222;
   .popCon{
+    width: 100%;
+    max-height: 100svh;
+    overflow-y: visible;
     padding: 0 0 0 15px;
-    margin: 0 10px 30px 0;
-    max-height: 680px;
+    margin: 0;
+    display: table;
   }
   .bgm-container-top{
     display:flex; align-items:center; justify-content:space-between; 
@@ -2012,7 +2020,7 @@
     line-height: 100%;
     color: rgba(34, 34, 34, 0.5);
     opacity: 0.8;
-    width: 355px;
+    width: 100%;
     margin: 12px 10px 0;
   }
   .board-list thead th{
@@ -2052,9 +2060,17 @@
     max-width: 240px;
     @include ellipsis(1);
   }
+  .bgm-play-btn{
+    padding-right: 10px;
+  }
 }
 
 .ClientListAll{
+  background: #fff;
+  z-index: 11;
+  position: relative;
+  height: 100svh;
+  color: #222222;
   .sec-btn-L-on02{
     padding: 16.5px;
   }
@@ -2244,6 +2260,11 @@
 }
 
 .CamView{
+  background: #fff;
+  z-index: 11;
+  position: relative;
+  height: 100svh;
+  color: #222222;
   .popCon{
     max-height: 776px;
     margin: 10px 10px 30px 0;
@@ -2296,6 +2317,11 @@
 }
 
 .ClientListAll, .HostPass{
+  background: #fff;
+  z-index: 11;
+  position: relative;
+  height: 100svh;
+  color: #222222;
   button[class*="-L"]{
     padding: 17px;
   }
@@ -3322,7 +3348,7 @@
   
     // 좌측상단 메뉴 버튼
     .Menu{
-      width: 335px; padding: 90px 20px 0;
+      width: 100%; padding: 90px 20px 0;
       .MenuCon{
         @include flexCol(23px);
       }
@@ -4072,8 +4098,6 @@
       bottom: 0;
       top: auto;
       right: auto;
-      height: 532px;
-      border-radius: 20px 20px 0 0;
       .popCon{
         max-height: calc(100% - 60px);
         margin: 10px 10px 0 0;
@@ -4266,12 +4290,7 @@
     }
   
     .HostPass {
-      left: 0;
-      bottom: 0;
-      top: auto;
-      right: auto;
-      height: 655px;
-      border-radius: 20px 20px 0 0;
+
       .popTit {
         padding: 32px 0 18px;
       }
@@ -4301,16 +4320,12 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 345px;
-      height: 571px;
-      max-height: 90%;
-      border-radius: 20px;
+
       .con-wrap {
         padding: 0;
-        max-height: calc(100% - 113px);
+        max-height: 80svh;
         .con-inner-col {
-          max-height: 100%;
-          padding: 20px 30px;
+          padding: 20px;
         }
       }
       .thumblist {
@@ -4320,7 +4335,7 @@
       .checkbox-label {
         margin-right: 0;
         img {
-          width: 84px; height: 86px;
+          width: 78px; height: 80px;
         }
       }
       .center {
@@ -4329,9 +4344,8 @@
         bottom: 0;
         margin-bottom: 0 !important;
         width: 100%;
-        button {
-          width: 100%;
-          border-radius: 0px 0px 20px 20px;
+        button{
+          margin: 20px auto;
         }
       }
     }
@@ -4477,7 +4491,6 @@
           left: 21px;
         }
         input {
-          width: 335px;
           height: 54px;
           padding: 0 49px 0 41px;
         }
@@ -4489,9 +4502,10 @@
     }
   
     .SearchList {
-      width: 335px;
+      width: 100%;
       padding-top: 10px;
-  
+      justify-content: center;
+    flex-wrap: wrap;
       li {
         width: 160px;
         background: #fff;
@@ -5123,21 +5137,17 @@
   }
   // 홍보물 확인
   .Promotion09 {
-    width: 345px;
-    height: 571px;
-    background: #FFFFFF;
+    background: #fff;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   
     .con-wrap {
-      max-height: 512px;
       padding: 20px 0 20px 20px;
   
       .con-inner-col {
-        max-height: 493px;
+        max-height: 88svh;
         padding-right: 16px;
         margin-right: 4px;
         
@@ -5188,6 +5198,7 @@
   .BGM {
     table {
       max-height: calc(100svh - 170px );
+      padding-right: 20px;
     }
   }
   
@@ -5241,6 +5252,11 @@
   
   }
 
+@media all and (max-width:280px) {
+  .BGM .bgm-play-tit{
+    max-width: 160px;
+  }
+}
 
 //********** landscape 가로 모바일
 @media all and (orientation: landscape) {
@@ -6518,9 +6534,7 @@
     .HostPass {
       .popMoBar {display: none;}
       .popCon.ty-01{
-        max-height: calc(100% - 58px);
-        margin: 10px 10px 0 0;
-        padding-bottom: 90px;
+        max-height: calc(100svh - 176px);
       }
       .center {
         position: absolute;
@@ -6552,14 +6566,10 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 90%;
-      height: 90%;
-      border-radius: 20px;
       .con-wrap {
         padding: 0;
-        max-height: calc(100% - 115px);
+        max-height: 57svh;
         .con-inner-col {
-          max-height: 100%;
           padding: 20px 30px;
         }
       }
@@ -6580,8 +6590,7 @@
         margin-bottom: 0 !important;
         width: 100%;
         button {
-          width: 100%;
-          border-radius: 0px 0px 20px 20px;
+margin: 20px auto;
         }
       }
     }
@@ -7392,20 +7401,16 @@
     }
     // 홍보물 확인
     .Promotion09 {
-      width: 335px;
-      height: 335px;
       background: #FFFFFF;
       box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
-      border-radius: 20px;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
       .con-wrap {
-        max-height: 277px;
         padding: 20px 0 20px 20px;
   
         .con-inner-col {
-          max-height: 237px;
+          max-height: 72svh;
           padding-right: 16px;
           margin-right: 4px;    
         }
@@ -7560,6 +7565,11 @@
   .eventzoneLoc {
     @include LtCon(479px, 268px, 1);
   }
+// 모바일 이동 버튼
+.moving-pad {
+  &.left {left: 20px;}
+  &.right {right: 20px;}
+}
 
   // npc guide
   .Tb-NpcMessage {

@@ -1,4 +1,4 @@
-$res_root: 'http://localhost:3001';
+$res_root: 'http://localhost:3002';
 
 @mixin txt700($size,$color){font-weight: 700;line-height: 100%;font-size: $size;color: $color;}
 @mixin txt600($size,$color){font-weight: 600;line-height: 100%;font-size: $size;color: $color;}
@@ -153,7 +153,7 @@ $res_root: 'http://localhost:3001';
 @mixin popCenter() {
     overflow: hidden;
     @include RtCon(50%, 84px, 10);
-    transform: translateY(-50%);
+    transform: translateY(calc(-50% + 0.5px));
     border-radius: 20px;
     width: 375px;
     height: auto;
@@ -165,7 +165,7 @@ $res_root: 'http://localhost:3001';
 // 메인 중앙 팝업창
 @mixin CenterCon() {
     @include LtCon(50%, 50%, 10);
-    transform: translate(-50%, -50%);
+    transform: translate(calc(-50% + 0.5px), calc(-50% + 0.5px));
     width: 787px;
     max-height: 800px;
     overflow: hidden;
@@ -177,7 +177,7 @@ $res_root: 'http://localhost:3001';
 // 메인 중앙 팝업창
 @mixin CenterCon2() {
     @include LtCon(50%, 50%, 10);
-    transform: translate(-50%, -50%);
+    transform: translate(calc(-50% + 0.5px), calc(-50% + 0.5px));
     width: 335px;
     max-height: 100%;
     overflow: hidden;
@@ -188,7 +188,7 @@ $res_root: 'http://localhost:3001';
 // 상단 중앙 팝업창
 @mixin popTopCenter() {
     @include LtCon(0, 50%, 11);
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% + 0.5px));
 }
 
 // 마이 프로필 인풋 버튼 공통영역
@@ -206,7 +206,7 @@ $res_root: 'http://localhost:3001';
 
 @mixin AlarmCon() {
     @include LtCon(50%, 50%, 10);
-    transform: translate(-50%, -50%);
+    transform: translate(calc(-50% + 0.5px), calc(-50% + 0.5px));
     width: 335px;
     max-height: 800px;
     overflow: hidden;
@@ -217,7 +217,7 @@ $res_root: 'http://localhost:3001';
 
 @mixin MsgCon() {
     @include LtCon(50%, 50%, 10);
-    transform: translate(-50%, -50%);
+    transform: translate(calc(-50% + 0.5px), calc(-50% + 0.5px));
     width: 579px;
     height: 165px;
     overflow: hidden;
@@ -227,7 +227,7 @@ $res_root: 'http://localhost:3001';
 
 @mixin guidepop-01() {
     @include LtCon(50%, 50%, 10);
-    transform: translate(-50%, -50%);
+    transform: translate(calc(-50% + 0.5px), calc(-50% + 0.5px));
     overflow: hidden;
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);

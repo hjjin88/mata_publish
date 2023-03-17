@@ -5,6 +5,8 @@ import Kiosk from "./Kiosk";
 import NpcMessage from "./NpcMessage";
 import EventMessage from "./EventMessage";
 import QuestIcon from "./QuestIcon";
+import Stamp from "./Stamp";
+
 
 const Popups = ({ popName, setPopName }) => {
     return (
@@ -29,6 +31,9 @@ const Popups = ({ popName, setPopName }) => {
         )}
         { popName === 'QuestIcon' && (
           <QuestIcon setPopName={setPopName} />
+        )}
+        { popName === 'Stamp' && (
+          <Stamp setPopName={setPopName} />
         )}
         </>
     )

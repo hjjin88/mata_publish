@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 
 const Kiosk = ({setPopName }) => {
 
-    // const [view, setView] = useState(false); 
-
     return (
         <>
         <div className="Pop">
-            <button type="button" className="subclose close16" onClick={(e) => {setPopName();}}/>
+        <button type="button" 
+            className="subclose-out" 
+            onClick={(e) => {setPopName();}}>
+            <img src="/resources/img/close16.svg" alt="닫기 버튼 이미지" />
+        </button>
             <div className="Pop-ty03">
                 <div className="hspc_kiosk_banner">
                     <img src="/resources/img/hspc_kiosk_banner.svg" alt="한신포차 배너 이미지" />

@@ -12,7 +12,7 @@ const CamView = ({setPopName }) => {
 
     return (
         <>
-        <div className="popCenter CamView">
+        <div className="CamView">
             <button type="button" className="subclose close16" onClick={ e => { setPopName(); }} />
             <div className="popTit">캠보기</div>
             <div className="popCon">

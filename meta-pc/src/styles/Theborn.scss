@@ -42,9 +42,74 @@ html {
         
     }
 }
-
+.Stamp{
+    @include LtCon(50%, 50%, 11);
+    transform: translate(-50%, -50%); 
+    @include bg('stamp_bg');
+    width: 1189px;
+height: 549px;
+.subclose-out{
+    top: 50px;
+}
+&-con{
+    display: flex;
+    gap: 0;
+    height: 549px;
+    &-left{
+        width: 386.43px;
+        @include flexCol(12px);
+        flex-shrink: 0;
+        .tit{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 100%;
+            color: #CB9200;
+        }
+        .time{
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 100%;
+            color: #001F60;
+        }
+        .txt{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 100%;
+            color: #CB9200;
+        }
+    }
+    &-right{
+        @include flexCol03(102px);
+        padding: 87px 52px 39px 52px;
+        &-list{
+            display: flex;
+            flex-wrap: wrap;
+            height: 283px;
+            gap: 29px 18px;
+            li{
+                @include flexCtr(0);
+                width: 125px;
+            }
+        }
+        &-desc{
+            width: fit-content;
+            margin: 0 auto;
+            li{
+                padding-bottom: 8px;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 100%;
+                text-align: left;
+                color: #787878;
+                &::before{
+                    content: '· '
+                }
+            }
+        }
+    }
+}
+}
 .Pop{
-    overflow: hidden;
     @include LtCon(50%, 50%, 11);
     transform: translate(-50%, -50%);
     text-align: center;
@@ -136,8 +201,9 @@ html {
     }
     .hspc_kiosk_banner img{width: 100%;}
     .kiosk{
-        height: 100svh;
+        height: 67.7svh;
         background: #FEB700;
+        border-radius: 0 0 10px 10px;
         .kiosk-tit{
             width: 100%;
             padding: 16.17px 20px 15.5px;
@@ -156,8 +222,7 @@ html {
             &-item{
                 width: 32.5%;
                 @include flexCol(0);
-                // width: 189px;
-                // height: 261.67px;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
                 p{
                     @include flexCtr(0);
                     width: 188.84px;
@@ -166,14 +231,12 @@ html {
                     font-weight: 700;
                     font-size: 15px;
                     color: #fff;
-                    // 테스트
-                    position: absolute;
-                    margin-top: 181px;
                 }
             }
             .center{
                 margin: 0 auto;
                 .Pop-btn-02-red{
+                    margin-top: 64px;
                     margin-bottom: 22.5px;
                 }
             }

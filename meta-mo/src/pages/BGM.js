@@ -14,7 +14,7 @@ const BGM = ({popName, setPopName}) => {
 
     return (
         <>
-        <div className="popCenter BGM">
+        <div className="BGM">
             <button type="button" className="subclose close16" onClick={ e => { setPopName(); }} />
             <div className="popTit">BGM</div>
             <div className="bgm-container">

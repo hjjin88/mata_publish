@@ -10,15 +10,6 @@ const Promotion02 = ({setPopName }) => {
         <div className="Promotion Promotion02 CtPop">
             <button type="button" className="subclose close16" onClick={(e ) => {setPopName();}} />
             <div className="popTit">이미지 선택</div>
-            <div className="final-check">
-                <label className="checkbox-label">
-                    <input type="checkbox" className="checkbox-input" />
-                    <button 
-                    className={`checkbox-box ${Check ? "on" : null }`}
-                    onClick={() => {setCheck(!Check)}} 
-                    />
-                </label>
-            </div>
             <div className="con-wrap">
                 <div className="con-inner-col">
                     <div className="modal-body">

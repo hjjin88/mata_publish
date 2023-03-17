@@ -10,7 +10,7 @@ const HostPass = ({popName, setPopName }) => {
 
     return (
         <>
-        <div className="HostPass popCenter">
+        <div className="HostPass">
             <div className="popMoBar" />
             <button type="button" className="subclose close16" onClick={ e => { setPopName(); }} />
             <div className="popTit">방장 넘기기</div>

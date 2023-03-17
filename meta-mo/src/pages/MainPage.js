@@ -59,7 +59,7 @@ const MainPage = () => {
         <BtBar popName={popName} setPopName={setPopName} />
         <Popups popName={popName} setPopName={setPopName} />
         <UnKnowBtn popName={popName} setPopName={setPopName} />
-        <div className="pad-guide">
+        {/* <div className="pad-guide">
           <div class="moving-pad left">
             <span class="handler"></span>
           </div>
@@ -67,13 +67,12 @@ const MainPage = () => {
             <span class="handler"></span>
           </div>
         </div>
-        {/* 센터 */}
         <div className="pad-guide-center">
           <div class="moving-pad center">
             <span class="handler"></span>
           </div>
-        </div>
-      </div>
+        </div> */}
+      </div> 
     </div>
   )
 }
