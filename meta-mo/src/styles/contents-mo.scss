@@ -61,7 +61,7 @@
     display: block; 
     left: 50%; 
     top: 50%; 
-    transform: translate(-50%, -50%); 
+    transform: translate(calc(-50% + 0.5px), calc(-50% + 0.5px)); 
     width: 23px; 
     height: 23px; 
     background-color: #fff; 
@@ -69,7 +69,7 @@
     opacity: 0.6;
   }
   &.left {left: 60px;}
-  &.center {left: 50%;transform: translateX(-50%);}
+  &.center {left: 50%;transform: translateX(calc(-50% + 0.5px));}
   &.right {
     right: 110px;
     .handler {
@@ -256,7 +256,7 @@
   }
   button[class*="sec-btn"]{
   width: 305px;
- }
+  }
 }
 
 // 좌측상단 지도 버튼
@@ -350,8 +350,8 @@
     .Chat-desc{
       position: relative;
       @include flexCtr(0);
-      &::before{content: '';@include LtCon(7px, 0, 0);width: 87px;height: 1px;background: #eee;}
-      &::after{content: '';@include RtCon(7px, 0, 0);width: 87px;height: 1px;background: #eee;}
+      &::before{content: '';@include LtCon(7px, 0, 0);width: 25%;height: 1px;background: #eee;}
+      &::after{content: '';@include RtCon(7px, 0, 0);width: 25%;height: 1px;background: #eee;}
     }
   }
   .ChatMessage{
@@ -588,7 +588,6 @@
   }
   .ct-title {margin-bottom: 20px; color: #111; font-size: 16px; font-weight: 700; }
   .ct-title-sm {margin-bottom: 19px; color: #000; font-size: 13px; font-weight: 500; line-height: 16px;}
-  // .cam-view .cam-box {position: relative; @include flexCol04(0);width: 315px; height: 186px; margin-bottom: 30px; background-color: #f2f3f8; border: 1px solid #eee; border-radius: 20px;}
   .cam-view .cam-box p {
     position: absolute;
     top: 79px;
@@ -614,7 +613,6 @@
     padding-top: 50px;
   }
 }
-
 .MessageInner{
   font-weight: 500;
   font-size: 13px;
@@ -647,8 +645,8 @@
     .Chat-desc{
       position: relative;
       @include flexCtr(0);
-      &::before{content: '';@include LtCon(7px, 0, 0);width: 87px;height: 1px;background: #eee;}
-      &::after{content: '';@include RtCon(7px, 0, 0);width: 87px;height: 1px;background: #eee;}
+      &::before{content: '';@include LtCon(7px, 0, 0);width: 25%;height: 1px;background: #eee;}
+      &::after{content: '';@include RtCon(7px, 0, 0);width: 25%;height: 1px;background: #eee;}
     }
     .Chat-desc-time{
       position: relative;
@@ -657,10 +655,11 @@
       font-size: 12px;
       line-height: 100%;
       color: #999999;
-      &::before{content: '';@include LtCon(7px, 0, 0);width: 275px;height: 1px;background: #eee;}
-      &::after{content: '';@include RtCon(7px, 0, 0);width: 275px;height: 1px;background: #eee;}
+      &::before{content: '';@include LtCon(7px, 0, 0);width: 25%;height: 1px;background: #eee;}
+      &::after{content: '';@include RtCon(7px, 0, 0);width: 25%;height: 1px;background: #eee;}
     }
   }
+
   .ChatMessage{
     display: flex;padding: 5px 62px 7px;border-top: 1px solid #EEEEEE;
     .MessageBox {
@@ -694,7 +693,6 @@
 }
 .ProfileView{
   width: 323px;
-  // height: 390px;
   .MyProfileCon{
     position: relative;@include flexCtr(40px);
     .MyProfileInner{@include flexCol(0);padding: 30px 0 40px;}
@@ -926,11 +924,6 @@
     height: 690px;
     padding-top: 50px;
     margin: 0 auto;
-
-    // img {
-    //   width: 787px;
-    //   height: 450px;
-    // }
 
     .Slide_textarea {
       margin: 82px auto;
@@ -3169,8 +3162,6 @@
   .-No{@include LtCon(-3px, 12px, 0);}
 
   // 팝업창 타이틀
-  // css 확인필요
-  // .popTit{@include flexCtr(0);width: 100%;padding: 20px 0;font-size: 17px;}  
   .popTit{@include flexCtr(0);width: 100%;padding: 20px 0;font-size: 24px;}  
   .subTit{
     font-weight: 700;
@@ -3189,8 +3180,6 @@
     .popMoBar {@include LtCon(9px, 50%, 1); width: 80px; height: 6px; border-radius: 5px; background: #ddd; transform: translateX(-50%); }
     .popMoBar.bt {@include BtLtCon(8px, 50%, 1); top: auto; width: 134px; height: 5px; border-radius: 5px; background: #ddd; transform: translateX(-50%); }
   
-    // css 확인필요
-    // @mixin popBtRt(){@include BtRtCon(0, 50%, 10);transform: translateX(50%);width: 100%;}
     .popCenter, .Chat, .Voters{@include popCenter();}
     .Around, .Emoji {@include popBtRt(); border-radius: 30px 30px 0 0;}
     .AroundAll {
@@ -3213,7 +3202,6 @@
     }
     .popCon.ty-01{
       @include flexCol03(20px);
-      // max-height: 704px;
       max-height: calc(100svh - 115px);
       margin-bottom: 20px;
       .Profile-set{    
@@ -3582,7 +3570,6 @@
     }
     .ProfileView{
       width: 323px;
-      // height: 390px;
       right: auto;
       left: 50%;
       top: 50%;
@@ -5203,7 +5190,7 @@
   }
   
    // 채팅
-   .Chat {
+  .Chat {
     @include popBtRt();
     top: auto;
     background: #fff;
@@ -5248,13 +5235,18 @@
       padding: 30px 15px 30px 20px;
     }
   }
+}
   
-  
-  }
-
+// Galaxy Fold 갤럭시 폴드 (280px)
 @media all and (max-width:280px) {
   .BGM .bgm-play-tit{
     max-width: 160px;
+  }
+  .Chat .ChatCon .Chat-desc::before{
+    width: 18%;
+  }
+  .Chat .ChatCon .Chat-desc::after{
+    width: 18%;
   }
 }
 
@@ -7478,299 +7470,16 @@ margin: 20px auto;
     }
   }
 
-// 더본코리아
 
-// 맵 이벤트존 위치 아이콘
-.eventzoneLoc {
-  @include LtCon(423px, 935px, 1);
-}
-
-// npc guide
-.Tb-NpcMessage {
-  .con-wrap {
-    min-height: auto;
-    height: 147px;
-    max-height: 147px;
-    padding: 30px 150px 51px 34px;
-
-    .con-inner-col {
-      padding-right: 0;
-    }
+// Galaxy Fold 갤럭시 폴드(280px)
+@media all and (max-width:280px) {
+  .BGM .bgm-play-tit{
+    max-width: 160px;
   }
-
-  .sec-btn {
-    @include BtRtCon(21px, 15px, 1);
-    width: 122px;
+  .Chat .ChatCon .Chat-desc::before{
+    width: 18%;
   }
-}
-
-//메시지 팝업
-.Tb-MessageInner {
-  .ChatCon .Chat01 .ChatAlert .ChatTxt {
-    border-radius: 0 0 12px 12px;
-
-    &::before {
-      @include bg('chatBalloon03');
-    }
+  .Chat .ChatCon .Chat-desc::after{
+    width: 18%;
   }
-
-  .ChatAlertTxt {
-    @include flexArCtr(0);
-    width: 100%;
-    height: 25px;
-    padding: 6px 20px;
-    border-radius: 0 12px 0 0;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 100%;
-    color: #FFFFFF;
-    background: #8265F6;
-  }
-}
-
-// 퀘스트 아이콘
-.Quest-icon {
-  position: relative;
-
-  .Npc-alert {
-    @include LtCon(314px, 1174px, 10);
-  }
-
-  .Event-view {
-    @include LtCon(403px, 541px, 10);
-  }
-
-  .Event-play {
-    @include LtCon(453px, 541px, 10);
-  }
-
-  .Event-balloon {
-    @include LtCon(409px, 734px, 10);
-    display: flex;
-    justify-content: center;
-    width: 189px;
-    height: 86px;
-    padding-top: 28px;
-    @include bg('tb-eventBalloon', $format: "png");
-
-    p {
-      text-align: center;
-    }
-  }
-}
-
-//********* portrait 세로 모바일
-@media all and (orientation: portrait) {
-
-  // 맵 이벤트존 위치 아이콘
-  .eventzoneLoc {
-    @include LtCon(479px, 268px, 1); 
-  }
-
-  // npc guide
-  .Tb-NpcMessage {
-    max-width: 355px;
-    width: 100%;
-    .popTit {
-      font-size: 18px;
-      padding-bottom: 14px;
-    }
-
-    .con-wrap {
-      min-height: auto;
-      height: 107px;
-      max-height: 107px;
-      padding: 20px 60px 20px 30px;
-
-      .con-inner-col {
-        max-height: none;
-        overflow: hidden;
-      }
-    }
-
-    .sec-btn {
-      @include BtRtCon(10px, 11px, 1);
-      width: 60px;
-      padding: 4px 15px;
-    }
-  }
-
-  //메시지 팝업
-  .Tb-MessageInner {
-    .msg-pfp {
-      display: none;
-    }
-
-    .con-wrap {
-      padding: 0;
-      max-height: calc(100% - 65px);
-    }
-
-    .ChatCon .Chat01 .ChatAlert .ChatTxt {
-      border-radius: 0 0 12px 12px;
-
-      &::before {
-        @include bg('chatBalloon03');
-      }
-    }
-
-    .ChatAlertTxt {
-      height: 24px;
-      padding: 5px 15px;
-    }
-
-    .ChatMessage .MessageBox {
-      padding: 8px 13px 7px 12px;
-
-      button {
-        width: 32px;
-        height: 32px;
-        @include bg('Enteron32');
-        flex-shrink: 0;
-      }
-
-      button.EnterOn20 {
-        @include bg('Enteroff32');
-      }
-    }
-
-    .ChatCon .Chat-desc-time {
-      &::before {
-        top: 5px;
-        width: 34%;
-      }
-
-      &::after {
-        top: 5px;
-        width: 34%;
-      }
-    }
-  }
-
-  // 퀘스트 아이콘
-  .Quest-icon {
-    position: relative;
-
-    .Npc-alert {
-      @include LtCon(181px, 177px, 10);
-    }
-
-    .Event-view {
-      @include LtCon(291px, 149px, 10);
-    }
-
-    .Event-play {
-      @include LtCon(341px, 149px, 10);
-    }
-
-    .Event-balloon {
-      @include LtCon(391px, 58px, 10);
-    }
-  }
-
-}
-
-//********** landscape 가로 모바일
-@media all and (orientation: landscape) {
-
-  // 맵 이벤트존 위치 아이콘
-  .eventzoneLoc {
-    @include LtCon(162px, 588px, 1);
-  }
-
-  // npc guide
-  .Tb-NpcMessage {
-    max-width: 651px;
-    width: 100%;
-    .popTit {
-      font-size: 18px;
-      padding-bottom: 14px;
-    }
-
-    .con-wrap {
-      min-height: auto;
-      height: 77px;
-      max-height: 77px;
-      padding: 10px 93px 10px 98px;
-
-      .con-inner-col {
-        max-height: none;
-        overflow: hidden;
-      }
-    }
-
-    .sec-btn {
-      @include BtRtCon(7px, 11px, 1);
-      width: 60px;
-      padding: 4px 15px;
-    }
-  }
-
-  //메시지 팝업
-  .Tb-MessageInner {
-    .msg-pfp {
-      display: none;
-    }
-
-    .con-wrap {
-      padding: 0;
-      max-height: calc(100% - 65px);
-    }
-
-    .ChatCon .Chat01 .ChatAlert .ChatTxt {
-      border-radius: 0 0 12px 12px;
-
-      &::before {
-        @include bg('chatBalloon03');
-      }
-    }
-
-    .ChatAlertTxt {
-      height: 24px;
-      padding: 5px 15px;
-    }
-
-    .ChatMessage .MessageBox {
-      height: 28px;
-      padding: 8px 5px 7px 12px;
-
-      button {
-        flex-shrink: 0;
-      }
-    }
-
-    .ChatCon .Chat-desc-time {
-      &::before {
-        top: 5px;
-        width: 43%;
-      }
-
-      &::after {
-        top: 5px;
-        width: 43%;
-      }
-    }
-  }
-
-  // 퀘스트 아이콘
-  .Quest-icon {
-    position: relative;
-
-    .Npc-alert {
-      @include LtCon(36px, 575px, 10);
-    }
-
-    .Event-view {
-      @include LtCon(150px, 339px, 10);
-    }
-
-    .Event-play {
-      @include LtCon(200px, 339px, 10);
-    }
-
-    .Event-balloon {
-      @include LtCon(250px, 339px, 10);
-    }
-  }
-
 }
