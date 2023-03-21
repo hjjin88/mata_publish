@@ -5,13 +5,13 @@ const Pop_ty01 = ({setPopName }) => {
     return (
         <>
         <div className="Pop">
-            <button type="button" className="subclose close16" onClick={(e) => {setPopName();}}/>
             <div className="Pop-ty02">
+                <button type="button" className="subclose close16" onClick={(e) => {setPopName();}}/>
                 <div className="Pop-tit-02">미션 성공</div>
                 {/* 1. 빽다방 쿠폰 이미지*/}
                 <div className="Pop-img">
-                    <img className="Pop-img-twinkle" src="/resources/img/twinkle_mo.svg" alt="반짝이 이미지" />
-                    <img className="Pop-img-inner" src="/resources/img/paikdb_coupon_mo.svg" alt="빽다방 쿠폰 이미지" />
+                    <img className="Pop-img-twinkle" src="/resources/img/twinkle.svg" alt="반짝이 이미지" />
+                    <img className="Pop-img-inner" src="/resources/img/paikdb_coupon.svg" alt="빽다방 쿠폰 이미지" />
                     <div className="Pop-img-txt-01">[빽다방] 5000원 쿠폰</div>
                 </div>
                 {/* 2. 빽다방 선물박스 */}

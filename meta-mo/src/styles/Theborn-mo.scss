@@ -5,22 +5,32 @@ html {
     color: #fff;
 }
 
+.subclose {
+    position: absolute;
+    top: 12px;
+    right: 13px;
+    z-index: 12;
+}
+
 // 퀘스트 창
-.Quest{
+.Quest {
     @include LtCon(24%, 0, 5);
     transform: translateY(-50%);
-    dl{
+
+    dl {
         font-weight: 600;
         font-size: 13px;
         color: #fff;
-        .mission{
+
+        .mission {
             position: relative;
             @include flexArCtr(0);
             @include bg('tb_quest_bg_mo');
             height: 27px;
             width: 202.5px;
             padding-left: 42px;
-            &::before{
+
+            &::before {
                 content: '';
                 @include bg('mission_mo');
                 position: absolute;
@@ -30,140 +40,168 @@ html {
                 height: 16px;
             }
         }
-        .mission.clear{
-            &::before{
+
+        .mission.clear {
+            &::before {
                 @include bg('mission_clear_mo');
             }
         }
-        dd{
+
+        dd {
             @include flexArCtr(0);
             height: 27px;
             width: 202.5px;
             padding-left: 42px;
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
         }
-        
+
     }
 }
-.Stamp{
+
+.Stamp {
     @include LtCon(50%, 50%, 11);
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     background: #fff;
     width: 100%;
     height: 100svh;
-    .subTit{
+
+    .subTit {
         border-bottom: 1px solid #eee;
     }
-&-con{
-    display: flex;
-    gap: 0;
-    height: 100svh;
-    &-left{
-        padding: 96px 41px;
-        @include flexCol04(11px);
-        flex-shrink: 0;
-        background: #FFE800;
-        .tit{
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 100%;
-            color: #CB9200;
-        }
-        .time{
-            font-weight: 700;
-            font-size: 48px;
-            line-height: 100%;
-            color: #001F60;
-        }
-        .txt{
-            font-weight: 500;
-            font-size: 13px;
-            line-height: 100%;
-            color: #CB9200;
-        }
-        .loading_bar{
-            width: 179px;
-            height: 9.95px;
-        }
-    }
-    &-right{
-        @include flexCol04(18px);
-        padding: 30.29px 0;
-        border-left: 3.05826px dashed #FEC600;
-        &-list{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 11.44px 4.72px;
-            width: 100%;
-            padding: 0 44px 18.56px;
-            border-bottom: 1px solid #eee;
-            li{
-                @include flexCtr(0);
-                width: 88px;
+
+    &-con {
+        display: flex;
+        gap: 0;
+        height: 100svh;
+
+        &-left {
+            padding: 96px 41px;
+            @include flexCol04(11px);
+            flex-shrink: 0;
+            background: #FFE800;
+
+            .tit {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 100%;
+                color: #CB9200;
             }
-        }
-        &-desc{
-            width: fit-content;
-            margin: 0 auto;
-            li{
-                padding-bottom: 11px;
-                font-weight: 400;
+
+            .time {
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 100%;
+                color: #001F60;
+            }
+
+            .txt {
+                font-weight: 500;
                 font-size: 13px;
                 line-height: 100%;
-                text-align: left;
-                color: #787878;
-                &::before{
-                    content: '·'
+                color: #CB9200;
+            }
+
+            .loading_bar {
+                width: 179px;
+                height: 9.95px;
+            }
+        }
+
+        &-right {
+            @include flexCol04(18px);
+            border-left: 3.05826px dashed #FEC600;
+
+            &-list {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 11.44px 4.72px;
+                width: 100%;
+                padding: 30.29px 0 18.56px;
+                border-bottom: 1px solid #eee;
+
+                li {
+                    @include flexCtr(0);
+                    width: 88px;
+                }
+            }
+
+            &-desc {
+                width: fit-content;
+                margin: 0 auto;
+
+                li {
+                    padding-bottom: 11px;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 100%;
+                    text-align: left;
+                    color: #787878;
+
+                    &::before {
+                        content: '·'
+                    }
                 }
             }
         }
     }
 }
-}
-.Pop{
+
+.Pop {
     @include LtCon(50%, 50%, 11);
     transform: translate(-50%, -50%);
     text-align: center;
     background: #fff;
     color: #222;
-    &-ty01{
+
+    &-ty01 {
+        @extend .Pop;
         width: 335px;
         padding: 30px 0 22px;
         border-radius: 10px;
-
     }
-    &-ty02{
+
+    &-ty02 {
+        @extend .Pop;
         width: 335px;
         border-radius: 10px;
     }
-    &-ty03{
+
+    &-ty03 {
         width: 100vw;
         height: 100svh;
     }
-    &-tit{
+
+    &-tit {
         font-weight: 700;
         font-size: 17px;
-        &-01{
+
+        &-01 {
             @extend .Pop-tit;
             padding: 0 0 25px;
         }
-        &-02{
+
+        &-02 {
             @extend .Pop-tit;
             padding: 10px;
             border-bottom: 1px solid #eee;
         }
     }
-    &-txt{
+
+    &-txt {
         font-weight: 400;
         font-size: 12px;
         line-height: 18px;
         color: #555;
     }
+
     &-btn {
         background: #8265F6;
         border-radius: 999px;
         color: #fff;
-        &-01{
+
+        &-01 {
             @extend .Pop-btn;
             width: 122px;
             height: 42px;
@@ -171,53 +209,70 @@ html {
             font-size: 15px;
             margin-top: 26px;
         }
-        &-02{
+
+        &-02 {
             @extend .Pop-btn;
             height: 32px;
             width: 187px;
             font-weight: 400;
             font-size: 15px;
             margin: 11px auto 17px;
-            &-red{
+
+            &-red {
                 @extend .Pop-btn-02;
-                width: 335px;
-                height: 55px;
+                width: calc(100% - 20%);
+                height: auto;
+                padding: 18px;
                 background: #E42122;
             }
         }
     }
-    &-img{
+
+    &-img {
         position: relative;
         margin: 0 auto;
         padding: 5px 0 3px;
-        &-inner{
+
+        &-twinkle {
+            width: 190px;
+        }
+
+        &-inner {
+            width: 142px;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
-        &-txt{
+
+        &-txt {
             font-weight: 700;
             font-size: 10px;
             color: #fff;
-            &-01{
+
+            &-01 {
                 @extend .Pop-img-txt;
-                @include LtCon(50%,50%,0);
+                @include LtCon(50%, 50%, 0);
                 transform: translate(-50%, -50%);
                 margin-top: 3px;
             }
-            &-02{
+
+            &-02 {
                 @extend .Pop-img-txt;
-                @include LtCon(72%,50%,0);
+                @include LtCon(72%, 50%, 0);
                 transform: translate(-50%, -50%);
             }
         }
     }
-    .hspc_kiosk_banner img{display: none;}
-    .kiosk-con{}
-    .kiosk{
+
+    .hspc_kiosk_banner img {
+        display: none;
+    }
+
+    .kiosk {
         border-radius: 0 0 10px 10px;
-        .kiosk-tit{
+
+        &-tit {
             width: 100%;
             padding: 5px 36.18px;
             text-align: left;
@@ -226,24 +281,29 @@ html {
             color: #fff;
             background: #FEB700;
         }
-        .kiosk-list{
-            @include flexArCtr(21px 4.4px);
+
+        &-list {
+            @include flexCtr(21px 4.4px);
             flex-wrap: wrap;
-            width: 50%;
-            padding: 22.5px 10px;
+            width: 50vw;
+            padding: 15px;
             background: #fff;
             height: calc(100svh - 94px);
             overflow-y: scroll;
             overflow-x: hidden;
-            &-item{
+
+            &-item {
                 @include flexCol(0);
+                width: 32%;
                 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-                img{
-                    width: 118.74px;
+
+                img {
+                    width: 100%;
                 }
-                p{
+
+                p {
                     @include flexCtr(0);
-                        width: 118.74px;
+                    width: 100%;
                     height: 71.67px;
                     background: #E42122;
                     font-weight: 700;
@@ -252,18 +312,21 @@ html {
                 }
             }
         }
-        .center{
+
+        .center {
             width: 50%;
             margin: 0 auto;
             position: absolute;
             bottom: 0;
             right: 0;
-            @include flexCol(0);            
-            .Pop-btn-02-red{
+            @include flexCol(0);
+
+            .Pop-btn-02-red {
                 margin-bottom: 16.5px;
             }
         }
-        .bar{
+
+        .bar {
             width: 100%;
             height: 31px;
             background: #FEB700;
@@ -271,32 +334,390 @@ html {
     }
 }
 
+// 맵 이벤트존 위치 아이콘
+.eventzoneLoc {
+    @include LtCon(423px, 935px, 1);
+  }
+  
+  // npc guide
+  .Tb-NpcMessage {
+    .con-wrap {
+      min-height: auto;
+      height: 147px;
+      max-height: 147px;
+      padding: 30px 150px 51px 34px;
+  
+      .con-inner-col {
+        padding-right: 0;
+      }
+    }
+  
+    .sec-btn {
+      @include BtRtCon(21px, 15px, 1);
+      width: 122px;
+    }
+  }
+  
+  //메시지 팝업
+  .Tb-MessageInner {
+    .ChatCon .Chat01 .ChatAlert .ChatTxt {
+      border-radius: 0 0 12px 12px;
+  
+      &::before {
+        @include bg('chatBalloon03');
+      }
+    }
+  
+    .ChatAlertTxt {
+      @include flexArCtr(0);
+      width: 100%;
+      height: 25px;
+      padding: 6px 20px;
+      border-radius: 0 12px 0 0;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 100%;
+      color: #FFFFFF;
+      background: #8265F6;
+    }
+  }
+  
+  // 퀘스트 아이콘
+  .Quest-icon {
+    position: relative;
+  
+    .Npc-alert {
+      @include LtCon(314px, 1174px, 10);
+    }
+  
+    .Event-view {
+      @include LtCon(403px, 541px, 10);
+    }
+  
+    .Event-play {
+      @include LtCon(453px, 541px, 10);
+    }
+  
+    .Event-balloon {
+      @include LtCon(409px, 734px, 10);
+      display: flex;
+      justify-content: center;
+      width: 189px;
+      height: 86px;
+      padding-top: 28px;
+      @include bg('tb-eventBalloon', $format: "png");
+  
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+
 //********* portrait 세로 모바일
 @media all and (orientation: portrait) {
-    .Pop .kiosk .kiosk-list{
+    .Pop {
+        &-ty01 {
+            width: calc(100vw - 10vw);
+        }
+
+        &-ty02 {
+            width: calc(100vw - 10vw);
+
+        }
+
+        &-ty03 {
+            width: 100vw;
+            height: 100svh;
+        }
+
+        &-btn-02-red {
+            width: calc(100vw - 10.5vw);
+        }
+
+        .kiosk {
+            border-radius: 0;
+
+            &-tit {
+                padding: 5px 16.71px;
+            }
+
+            &-list {
+                width: 100vw;
+                padding: 34px 5px;
+                height: fit-content;
+            }
+
+            .center {
+                width: 100vw;
+                position: absolute;
+                bottom: 0;
+
+                .Pop-btn-02-red {
+                    margin-top: 81px;
+                    margin-bottom: 36.5px;
+                }
+            }
+
+            .hspc_kiosk_banner {
+                width: 100%;
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .Stamp-con {
+        display: block;
+
+        &-left {
+            justify-content: center;
+            height: calc(100svh - 75svh);
+            padding: 43px 0;
+
+            .loading_bar {
+                width: 278px;
+            }
+        }
+
+        &-right {
+            gap: 24px;
+            border-left: 0;
+            border-top: 3.05826px dashed #FEC600;
+            &-list {
+                padding: 16px 0 22.61px;
+                justify-content: center;
+
+            li {
+                    width: 32%;
+                }
+
+            }
+            &-desc {
+                padding: 0 5%;
+                li {
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+      // 맵 이벤트존 위치 아이콘
+  .eventzoneLoc {
+    @include LtCon(479px, 268px, 1); 
+  }
+
+  // npc guide
+  .Tb-NpcMessage {
+    max-width: 355px;
+    width: 100%;
+    .popTit {
+      font-size: 18px;
+      padding-bottom: 14px;
+    }
+
+    .con-wrap {
+      min-height: auto;
+      height: 107px;
+      max-height: 107px;
+      padding: 20px 60px 20px 30px;
+      .con-inner-col {
+        max-height: none;
+        overflow: hidden;
+      }
+    }
+
+    .sec-btn {
+      @include BtRtCon(10px, 11px, 1);
+      width: 60px;
+      padding: 4px 15px;
+    }
+  }
+
+  //메시지 팝업
+  .Tb-MessageInner {
+    .msg-pfp {
+      display: none;
+    }
+
+    .con-wrap {
+      padding: 0;
+      max-height: calc(100% - 65px);
+    }
+
+    .ChatCon .Chat01 .ChatAlert .ChatTxt {
+      border-radius: 0 0 12px 12px;
+
+      &::before {
+        @include bg('chatBalloon03');
+      }
+    }
+
+    .ChatAlertTxt {
+      height: 24px;
+      padding: 5px 15px;
+    }
+
+    .ChatMessage .MessageBox {
+      padding: 8px 13px 7px 12px;
+
+      button {
+        width: 32px;
+        height: 32px;
+        @include bg('Enteron32');
+        flex-shrink: 0;
+      }
+
+      button.EnterOn20 {
+        @include bg('Enteroff32');
+      }
+    }
+
+    .ChatCon .Chat-desc-time {
+      &::before {
+        top: 5px;
+        width: 25%;
+      }
+
+      &::after {
+        top: 5px;
+        width: 25%;
+      }
+    }
+  }
+
+  // 퀘스트 아이콘
+  .Quest-icon {
+    position: relative;
+
+    .Npc-alert {
+      @include LtCon(181px, 177px, 10);
+    }
+
+    .Event-view {
+      @include LtCon(291px, 149px, 10);
+    }
+
+    .Event-play {
+      @include LtCon(341px, 149px, 10);
+    }
+
+    .Event-balloon {
+      @include LtCon(391px, 58px, 10); 
+    }
+  }
+}
+
+//********** landscape 가로 모바일
+@media all and (orientation: landscape) {
+
+    // 맵 이벤트존 위치 아이콘
+    .eventzoneLoc {
+        @include LtCon(162px, 588px, 1);
+    }
+
+    // npc guide
+    .Tb-NpcMessage {
+        max-width: 651px;
         width: 100%;
-        padding: 34px 10px;
-        height: auto;
-    }
-    .Pop .kiosk .kiosk-list-item img,
-    .Pop .kiosk .kiosk-list-item p{
-        width: 114px;
-    }
-    .Pop .hspc_kiosk_banner img{display: block;width: 100%;height: 60px;}
-    .Pop .kiosk .center{
-        width: auto;
-        position: unset;
-    }
-    .Pop .kiosk .center .Pop-btn-02-red{
-        margin: 75px auto 36.5px;
-    }
-    .Stamp-con{
-        display: block; 
-        &-left{
-            padding: 43px 41px;
+
+        .popTit {
+            font-size: 18px;
+            padding-bottom: 14px;
         }
-        &-right{
-            border-left:0;
+
+        .con-wrap {
+            min-height: auto;
+            height: 77px;
+            max-height: 77px;
+            padding: 10px 93px 10px 98px;
+
+            .con-inner-col {
+                max-height: none;
+                overflow: hidden;
+            }
+        }
+
+        .sec-btn {
+            @include BtRtCon(7px, 11px, 1);
+            width: 60px;
+            padding: 4px 15px;
         }
     }
+
+    //메시지 팝업
+    .Tb-MessageInner {
+        .msg-pfp {
+            display: none;
+        }
+
+        .con-wrap {
+            padding: 0;
+            max-height: calc(100% - 65px);
+        }
+
+        .ChatCon .Chat01 .ChatAlert .ChatTxt {
+            border-radius: 0 0 12px 12px;
+
+            &::before {
+                @include bg('chatBalloon03');
+            }
+        }
+
+        .ChatAlertTxt {
+            height: 24px;
+            padding: 5px 15px;
+        }
+
+        .ChatMessage .MessageBox {
+            height: 28px;
+            padding: 8px 5px 7px 12px;
+
+            button {
+                flex-shrink: 0;
+            }
+        }
+
+        .ChatCon .Chat-desc-time {
+            &::before {
+                top: 5px;
+                width: 25%;
+            }
+
+            &::after {
+                top: 5px;
+                width: 25%;
+            }
+        }
+    }
+
+    // 퀘스트 아이콘
+    .Quest-icon {
+        position: relative;
+
+        .Npc-alert {
+            @include LtCon(36px, 575px, 10);
+        }
+
+        .Event-view {
+            @include LtCon(150px, 339px, 10);
+        }
+
+        .Event-play {
+            @include LtCon(200px, 339px, 10);
+        }
+
+        .Event-balloon {
+            @include LtCon(250px, 339px, 10);
+        }
+    }
+
+}
+
+
+// Galaxy Fold 갤럭시 폴드(280px)
+@media all and (max-width:280px) {
+    .Stamp-con-right-list img{width: 70%;}
 }
