@@ -14,7 +14,10 @@ const Stamp = ({setPopName }) => {
                 <div className="Stamp-con-left">
                     <p className="tit">오늘의 스터디</p>
                     <div className="time">48분</div>
-                    <img src="/resources/img/loading_bar.png" alt="로딩 바 이미지" />
+                    <div className="loading_bar">
+                        <img src="/resources/img/loading_bar_bg.svg" alt="로딩 바 배경 이미지" />
+                        <img className="loading_bar_img" src="/resources/img/loading_bar.svg" alt="로딩 바 이미지" />
+                    </div>
                     <p className="txt">목표달성까지 12분 남았어요!</p>
                 </div>
                 <div className="Stamp-con-right">

@@ -47,10 +47,10 @@ html {
     transform: translate(-50%, -50%); 
     @include bg('stamp_bg');
     width: 1189px;
-height: 549px;
-.subclose-out{
-    top: 50px;
-}
+    height: 549px;
+    .subclose-out{
+        top: 50px;
+    }
 &-con{
     display: flex;
     gap: 0;
@@ -70,6 +70,17 @@ height: 549px;
             font-size: 64px;
             line-height: 100%;
             color: #001F60;
+        }
+        .loading_bar{
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+            border-radius: 16px;
+            &_img{
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
         }
         .txt{
             font-weight: 500;
